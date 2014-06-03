@@ -1,0 +1,64 @@
+div.sc_menu_wrapper {
+	position: fixed; 	
+	height: 100%;
+	/* Make bigger than a photo, because we need a place for a scrollbar. */
+	width:110px;
+	overflow: auto;
+	color:#fff;
+	text-align: center;
+	background-color:#fff;
+	/*background-color:#444;*/
+	/*background-color:rgba(70,70,70,0.5);*/
+}
+.sc_menu {
+	width:92px;
+	background-color:#444;
+}
+
+.sc_menu a {
+	display: block;
+	margin-bottom: 5px;
+	padding: 5px;
+	width: 92px;
+}
+.sc_menu img:hover {
+	/*opacity: 1;*/
+}
+.sc_menu div:hover {
+
+	opacity: 1;
+	color:#f90;
+	background-color:#fff;
+	cursor:pointer;
+	
+}
+.sc_menu div {
+	padding: 5px;
+	opacity: 0.7;
+}
+.sc_menu img {
+	display: block;
+	border: none;
+	border:1px #999 solid;
+	/*opacity: 0.5;*/
+	
+}
+
+
+.sc_menu_wrapper .loading {
+	position: absolute;
+	top: 50px;
+	left: 5px;
+	
+	margin: 0 auto;
+	padding: 5px;
+
+	width: 60px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;	
+	
+	text-align: center;
+	color: #fff;
+	border: 1px solid rgb(79, 79, 79);
+	background: #1F1D1D;
+}

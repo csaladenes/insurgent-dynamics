@@ -1,0 +1,218 @@
+/* DEFAULT THEME */
+html{
+	font-family: "Open Sans", Segoe UI light, Verdana, Tahoma,Helvetica,sans-serif;
+	font-size:13px;
+	color: #111; /* MAIN color for site things, but not for CONTENT!! */
+	background-color:#fff; /* Main background color */
+	text-decoration:none;
+	
+}
+/* NAVIGATION */
+nav>a{ /* main nav on top */
+	color:#FFF;
+	font-size:14px;
+	text-align:center;
+	text-decoration:none;
+}
+nav>a:hover{
+	color:#FFF;
+	background-color:#666;
+	text-decoration:none;
+}
+.navActive{
+	background-color:#F80;
+}
+.navActive1{
+	background-color:#F80;
+}
+.navActive:hover{
+	background-color:#F60;
+	text-decoration:none;
+}
+.navActive1:hover{
+	background-color:#F60;
+	text-decoration:none;
+}
+/* BODY PARTS */
+header{/* the header on top */
+			
+}
+#headerWrapper{
+	background-color:#444;
+	border-bottom:1px #999 solid;
+	/*box-shadow:0 0 5px #555;*/
+}
+#headerTitles>h1>a{/*the big header text */
+	color:#FFF;
+	font-size:22px;
+	text-decoration:none;
+	
+}
+#headerTitles>h1>a:hover{
+	color:#F90;
+	text-decoration:none;
+}
+#headerTitles>h2{/*the smaller title */
+	font-size:10px;
+	color:#CCC;
+}
+
+#content{ /* the content */
+	color:#fff;
+}
+#contentWrapper{
+	background-color:#fff;
+	-webkit-box-shadow: 0 0 7px #777;
+	-moz-box-shadow: 0 0 7px #777;
+	box-shadow: 0 0 7px #777;
+}
+footer{
+	color:#DDD;
+	font-size:10px;
+	background-color:rgba(70,70,70,0.5);
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+}
+/*Tiles */
+.tile:hover{
+	outline:1px solid #FFF;
+	-moz-box-shadow: 0 0 15px #333;
+	-webkit-box-shadow: 0 0 15px #333;
+	box-shadow:  0 0 15px #333;
+}
+@-moz-document url-prefix() { /* Firefox renders outlines wrong, so fix it */
+   .tile:hover{
+		outline:none;
+		-moz-box-shadow: 0 0 15px #333, 0 0 1px 1px #FFF;
+		box-shadow:  0 0 15px #333, 0 0 1px 1px #FFF;
+	}	
+}
+.tileFlip:hover .flipContainer{
+	outline: 1px solid #FFF;
+	-moz-box-shadow: 0 0 15px #333 !important;
+	-webkit-box-shadow: 0 0 15px #333 !important;
+	box-shadow: 0 0 15px #333 !important;
+}
+@-moz-document url-prefix() { /* Firefox renders outlines wrong, so fix it */
+   .tileFlip:hover .flipContainer{
+		outline: none;
+		-moz-box-shadow: 0 0 15px #333, 0 0 1px 1px #FFF !important;
+		box-shadow: 0 0 15px #333, 0 0 1px 1px #FFF !important;
+	}	
+}
+.halfop{
+	opacity: 0.5;
+}
+.quarterop{
+	opacity: 0.75;
+}
+.fullop{
+	opacity: 1;
+}
+.nineop{
+	opacity: 0.9;
+}
+/*More */
+a{	/* links */
+	color:#fff; /* Main color for links */
+	text-decoration:none;
+}
+a:hover{
+	color: #fff; /*Main color for hovered links */
+	text-decoration:underline;
+}
+a:active, a:selected, a:visited, a:focus {
+ 	outline: none;
+	border:none;
+}
+em{
+	margin-right:2px;
+}
+/* HEADINGS */
+h1{
+	font-size:40px;
+	font-weight:300;
+	margin:20px 0 5px 0;
+	color:#222;
+}
+h2{
+	font-size:32px;
+	font-weight:300;
+	margin:20px 0 5px 0;
+	color:#222;
+}
+h3{
+	font-size:24px;
+	font-weight:normal;
+	margin:20px 0 5px 0;
+	color:#444;
+}
+h4{
+	font-size:21px;
+	font-weight:300;
+	margin:15px 0 5px 0;
+	color:#444;
+	text-transform:uppercase;
+}
+h5{
+	font-size:20px;
+	font-weight:normal;
+	margin:13px 0 5px 0;
+	color:#555;
+}
+h6{
+	font-size:18px;
+	font-weight:normal;
+	margin:10px 0 5px 0;
+	color:#555;
+	text-transform:uppercase;
+}
+/*CONTENT */
+p{
+	margin-top:1.5em;
+}
+.display-block { display: block; }
+.margin-0 { margin: 0; }
+.margin-t-0 { margin-top: 0; }
+.margin-b-0 { margin-bottom: 0; }
+.margin-t-20 { margin-top:20px;}
+.margin-t-40 { margin-top:40px;}
+.margin-b-20 { margin-bottom:20px;}
+.margin-b-40 { margin-bottom:40px;}
+/* Fluid images and objects */
+.size-auto {
+	max-width: 100%;
+	height: auto;
+}
+/* Block Alignment*/
+.align-left{
+	display: block;
+	float: left;
+	text-align:left;
+}
+.align-right{
+	display: block;
+	float: right;
+	text-align:right;
+}
+.align-center{
+	display: block;
+	text-align:center;
+	margin: auto;
+}
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+/* Text color */
+.white{
+	color:#FFF;
+}
+.grey{
+	color:#333;
+}
+/*Weight */
+.weight-lighter{font-weight:lighter;}
+.weight-normal{font-weight:normal;}
+

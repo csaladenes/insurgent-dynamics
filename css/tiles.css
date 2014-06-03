@@ -1,0 +1,134 @@
+.tile{
+	color: #FFF;
+	display:block;
+	padding:0;
+	margin: 0;
+	position:absolute;
+	overflow:hidden;	
+	transition: box-shadow 0.25s ease-out;
+	-moz-transition: box-shadow 0.25s ease-out;
+	-webkit-transition:  box-shadow 0.25s ease-out;
+	-o-transition:  box-shadow 0.25s ease-out;
+	-ms-transition:  box-shadow 0.25s ease-out;
+	font-weight:normal;
+	text-decoration:none; /* They are links for google, so we'll decorate them like normal text :) */
+}
+.loading>.tile{
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition:  none;
+	-o-transition:  none;
+	-ms-transition:  none;
+}
+.tile:visited{
+	color:#FFF;
+}
+
+.tile:hover{
+	text-decoration: none;
+	color:#FFF;
+	cursor:pointer;
+}
+.tile img{
+	border:none;
+}
+.tile.noClick:hover{
+	cursor:default !important;
+	box-shadow: none !important;
+	-moz-box-shadow:none !important;
+	-webkit-box-shadow:none !important;
+	outline:none !important;
+}
+.tileTitle{
+	margin:5px 3px 5px 15px;
+	padding: 0px;
+	font-size: 28px;
+	font-weight:300;
+}
+.tileDesc{
+	margin: 0 12px 0 12px;
+	padding: 0;
+	font-size: 13px;
+	position:absolute;	
+}
+
+/*LABELS */
+.tileLabelWrapper{
+	position:absolute;
+	right:0;
+	padding:0;
+	margin:0;
+	height:auto;
+	z-index:11;
+}
+.tileLabel{
+	position:relative;
+	display:inline-block;
+	font-size:13px;	
+	text-decoration: none;  
+    color: #FFF; 
+}
+.tileLabelDesc{
+	border-top:1px solid #999;
+	background-color:rgb(140,140,140);
+	filter:opacity(alpha=0.8);
+	color:#CCC;
+	padding:3px;
+	font-size:12px;
+}
+.showOnHover{
+	display:none;
+}
+/*BOTTOM LABEL */
+.tileLabelWrapper.bottom{
+	bottom:0;
+	left:0;	
+	
+}
+.tileLabel.bottom{	
+	position:relative;
+	padding: 2px 2px 0px 2px;
+	margin-bottom:-4px;  
+    border-right: 15px solid transparent;  
+    border-bottom: 20px solid #777;    
+    height: 0;  
+    line-height: 17px;  
+}
+/* TOP LABEL */
+.tileLabelWrapper.top{
+	top:0;
+	border-left: 15px solid transparent;  
+    border-top: 20px solid #008198;
+	height: 0;
+	z-index:15;
+}
+.tileLabel.top{
+	padding: 0px 2px 2px 2px;  
+	top:-19px;	 
+}
+
+/*Misc tiles */
+.tileImg>img{
+	position:absolute;
+	height:auto;
+	top:50%;
+	left:50%;
+	z-index:1;
+}
+.tileImg .imgDesc{
+	position:relative;
+	top:0;
+	margin:0;
+	bottom:0;
+	z-index:2;
+	background: #fff;
+	border-top:  1px solid #AAA;
+	padding:5px;
+	font-size:12px;
+}
+.tileImg>.tileLabelWrapper.top>.imgDesc{
+	margin-top:-20px;
+}
+.tileImg>.tileLabelWrapper>.tileLabel.bottom{
+	bottom:-2px;
+}

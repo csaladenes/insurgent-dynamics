@@ -1,0 +1,54 @@
+/* MAIN nav (the top buttons) */
+nav{
+	z-index:1;
+	float:right;
+	vertical-align:middle;
+	margin-top:10px;
+}
+nav>a, #navItems>a{
+	padding: 7px 3px 5px 3px;
+	margin:0;
+	display:inline-block;
+	z-index:inherit;
+	cursor:pointer;
+	height:auto;
+	width:50px;
+	-webkit-transition: background 100ms ease-in;
+    -moz-transition: background 100ms ease-in;
+    -o-transition: background 100ms ease-in;
+	-ms-transition: background 100ms ease-in;
+    transition: background 100ms ease-in;
+}
+nav>a>img{
+	display:block;
+	margin: 0 auto 5px auto;
+}
+/* For smaller column nav */
+.column nav{
+	position:absolute;
+	right:0;
+	top:0;
+	margin-top:0;
+	z-index:300;
+	overflow:visible;
+}
+.column #navTitle{
+	background-color:#668800;
+	color:#FFF;
+	font-size:16px;
+	display:inline-block;
+	padding:5px;
+	margin-left:-10px;
+	cursor:pointer;
+	width:100%;
+}
+.column nav>a{
+	padding:5px;
+	display:none;
+	background-color:#444;
+	color:#FFF;
+	border-bottom:1px solid #777;
+}
+.column nav>a>img{
+	margin: 0 auto;
+}

@@ -1,0 +1,50 @@
+ul#menu, ul.submenu{
+    list-style: none;
+	padding: 0px;
+	margin:0px;
+	display:inline-block;
+	cursor:pointer;
+	height:auto;
+	width:80px;
+	-webkit-transition: background 100ms ease-in;
+    -moz-transition: background 100ms ease-in;
+    -o-transition: background 100ms ease-in;
+	-ms-transition: background 100ms ease-in;
+    transition: background 100ms ease-in;
+	color:#FFF;
+	font-size:14px;
+	overflow:visible;
+}
+ul#menu li{
+    float: left;
+}
+/* hide the submenu */
+li ul.submenu {
+    display: none;
+}
+ul#menu li a{
+    display: block;
+    text-decoration: none;
+    float:none;
+	padding:5px;
+	border-bottom:1px solid #777;
+}
+/* show the submenu */
+ul#menu li:hover ul.submenu{
+    display: block;
+    position: absolute;
+    float:left;
+}
+ul#menu li:hover li,  ul#menu li:hover a {
+    float: none;
+    background: #666;
+}
+ul#menu li:hover li a:hover {
+    background: #f80;
+}
+ul#menu li:hover li.menuSelected a:hover {
+    background: #f60;
+}
+ul#menu li:hover li.menuSelected a {
+    background: #f80;
+}

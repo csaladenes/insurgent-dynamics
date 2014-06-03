@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="Description" content="Insurgent Dynamics: A systematic analysis of civil unrest events"/>
+      <meta name="keywords" content="insurgency dynamics, insurgent, protest dynamics, insurgency, protest, war, war dynamics, systematic analysis, civil unrest, unrest events, protests, protest events, unrest, csala, denes, masdar, csaladenes, csala denes, csaladen, system dynamics, sustainability, system, research, personal, energy transitions, sustainable energy, agent-based, systems thinking, metro UI"/>
+      <meta name="viewport" content="width=1050, target-densitydpi=150, initial-scale=0.999">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Insurgent Dynamics</title>
+      <link rel="shortcut icon"  href="favicon.png" />
+     <link rel="stylesheet" type="text/css" href="css/layout.css" />
+      <link rel="stylesheet" type="text/css" href="css/nav.css" />
+      <link rel="stylesheet" type="text/css" href="css/tiles.css" />
+      <link rel="stylesheet" type="text/css" href="css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="css/colorbox.css" />
+	  <link rel='stylesheet' type='text/css' href='css/cssmenu.css' />
+	  <link rel="stylesheet" href="css/project_style.css" type="text/css" media="screen"/>
+      <style>
+         html{background-color:#fff;}
+         .tile{
+         -webkit-transition-property: box-shadow, margin-left,  margin-top;
+         -webkit-transition-duration: 0.25s, 0.5s, 0.5s;
+         -moztransition-property: box-shadow, margin-left,  margin-top;
+         -moz-transition-duration: 0.25s, 0.5s, 0.5s;
+         -o-transition-property: box-shadow, margin-left,  margin-top;
+         -o-transition-duration: 0.25s, 0.5s, 0.5s;
+         -ms-transition-property: box-shadow, margin-left,  margin-top;
+         -ms-transition-duration: 0.25s, 0.5s, 0.5s;
+         transition-property: box-shadow, margin-left,  margin-top;
+         transition-duration: 0.25s, 0.5s, 0.5s;
+         }
+      </style>
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery191.js"><\/script>')</script> 
+      <script type="text/javascript" src="js/plugins.js"></script>
+      <script>
+         scale = 145;
+         spacing = 10;
+         theme = 'theme_v3';
+         $group.titles = ["1980","1985","1990","1995","2000","2005","2010","2014","Contact"];
+         $group.spacingFull = [19,18,18,18,18,18,13,12,5];
+         $group.inactive.opacity = "1";
+         $group.inactive.clickable = "1";
+         $group.showEffect = 0;
+         $group.direction = "horizontal";
+         
+         mouseScroll = "1";
+         
+         siteTitle = 'Insurgent Dynamics';
+         siteTitleHome = '1980';
+         showSpeed = 400;
+         hideSpeed = 300;
+         scrollSpeed = 550;
+         
+         device = "desktop";
+         	scrollHeader = "1";
+         	disableGroupScrollingWhenVerticalScroll = "";
+         
+         /*For background image*/
+         bgMaxScroll= "130";
+         bgScrollSpeed = "450";
+         
+         /*For responsive */
+         autoRearrangeTiles = "1";
+         autoResizeTiles = "1";
+         rearrangeTreshhold = 3;
+		 
+		 
+      </script>
+      <script type="text/javascript" src="js/functions.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>    
+      <script type="text/javascript" src="js/colorbox.js"></script>   
+	  <script type="text/javascript" src="js/menu_pr.js"></script> 
+      <script type="text/javascript">
+         var _gaq = _gaq || [];
+         _gaq.push(['_setAccount', 'UA-40713687-1']);
+         _gaq.push(['_trackPageview']);
+         
+         (function() {
+           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + 	'.google-analytics.com/ga.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         })();
+          
+      </script>    
+      <noscript>
+         <style>#tileContainer{display:block}</style>
+      </noscript>
+	  	  
+   </head>
+   <body class="full desktop">
+      <header>
+         <div id="headerWrapper">
+		 <div style=" position:fixed;	top:10px;	right:20px; z-index:999;">
+			<ul id="menu">
+				<li><div style="background-color:#668800; padding: 7px 3px 5px 3px; margin:0; width:74px; text-align:center;">Menu</div>
+					<ul class="submenu">
+						<li class="menuSelected"><a href="./insurgent_dynamics.html">Dynamics</a></li>
+						<li><a href="./gdelt_data.html">Flitered</a></li>
+					</ul>
+				</li>
+			</ul>
+		 </div>
+		 <div id="country" style="float:left; margin-left:5px; font-size:16px; margin-top:15px; width:200px; overflow:hidden;">Afghanistan</div>
+            <div id="headerCenter">
+               <div id="headerTitles">
+                  <h1><a rel="author">Insurgent Dynamics</a></h1>
+                  <h2 >A systematic analysis of civil unrest events</h2>
+               </div>
+               <nav>
+                  <a rel="group0">1980</a>
+                  <a rel="group1">1985</a>
+                  <a rel="group2">1990</a>
+                  <a rel="group3">1995</a>
+                  <a rel="group4">2000</a>
+                  <a rel="group5">2005</a>
+                  <a rel="group6">2010</a>
+                  <a rel="group7">2014</a>
+                  <a rel="group8">Contact</a>
+				  <img style="width:40px;">
+				  <a id='data' onClick="$('#image').toggle(); $(this).toggleClass('navActive1');">Data</a>
+				  <a id='fit' onClick="$('#fitimage').toggle(); $('#image').toggleClass('halfop'); $(this).toggleClass('navActive1'); ">Fit</a>
+				  <script>$('#data').addClass('navActive1');</script>
+				  <img style="width:100px;">		
+               </nav>
+            </div>
+         </div>
+      
+	  
+	<div class="sc_menu_wrapper">
+    <div class="sc_menu">
+<div onClick="$('#image').attr('src','data/AF_timeline.png');$('#fitimage').attr('src','fit/AF_fit.png');$('#country').text('Afghanistan');"><img src="menu/AF_flag.png" width="80" height="55" alt="Afghanistan"/>Afghanistan</div>
+<div onClick="$('#image').attr('src','data/AX_timeline.png');$('#fitimage').attr('src','fit/AX_fit.png');$('#country').text('Akrotiri Sovereign Base Area');"><img src="menu/UK_flag.png" width="80" height="55" alt="Akrotiri Sovereign Base Area"/>Akrotiri Sovereign Base Area</div>
+<div onClick="$('#image').attr('src','data/AL_timeline.png');$('#fitimage').attr('src','fit/AL_fit.png');$('#country').text('Albania');"><img src="menu/AL_flag.png" width="80" height="55" alt="Albania"/>Albania</div>
+<div onClick="$('#image').attr('src','data/AG_timeline.png');$('#fitimage').attr('src','fit/AG_fit.png');$('#country').text('Algeria');"><img src="menu/AG_flag.png" width="80" height="55" alt="Algeria"/>Algeria</div>
+<div onClick="$('#image').attr('src','data/AQ_timeline.png');$('#fitimage').attr('src','fit/AQ_fit.png');$('#country').text('American Samoa');"><img src="menu/AQ_flag.png" width="80" height="55" alt="American Samoa"/>American Samoa</div>
+<div onClick="$('#image').attr('src','data/AN_timeline.png');$('#fitimage').attr('src','fit/AN_fit.png');$('#country').text('Andorra');"><img src="menu/AN_flag.png" width="80" height="55" alt="Andorra"/>Andorra</div>
+<div onClick="$('#image').attr('src','data/AO_timeline.png');$('#fitimage').attr('src','fit/AO_fit.png');$('#country').text('Angola');"><img src="menu/AO_flag.png" width="80" height="55" alt="Angola"/>Angola</div>
+<div onClick="$('#image').attr('src','data/AV_timeline.png');$('#fitimage').attr('src','fit/AV_fit.png');$('#country').text('Anguilla');"><img src="menu/AV_flag.png" width="80" height="55" alt="Anguilla"/>Anguilla</div>
+<div onClick="$('#image').attr('src','data/AY_timeline.png');$('#fitimage').attr('src','fit/AY_fit.png');$('#country').text('Antarctica');"><img src="menu/AY_flag.png" width="80" height="55" alt="Antarctica"/>Antarctica</div>
+<div onClick="$('#image').attr('src','data/AC_timeline.png');$('#fitimage').attr('src','fit/AC_fit.png');$('#country').text('Antigua and Barbuda');"><img src="menu/AC_flag.png" width="80" height="55" alt="Antigua and Barbuda"/>Antigua and Barbuda</div>
+<div onClick="$('#image').attr('src','data/AR_timeline.png');$('#fitimage').attr('src','fit/AR_fit.png');$('#country').text('Argentina');"><img src="menu/AR_flag.png" width="80" height="55" alt="Argentina"/>Argentina</div>
+<div onClick="$('#image').attr('src','data/AM_timeline.png');$('#fitimage').attr('src','fit/AM_fit.png');$('#country').text('Armenia');"><img src="menu/AM_flag.png" width="80" height="55" alt="Armenia"/>Armenia</div>
+<div onClick="$('#image').attr('src','data/AA_timeline.png');$('#fitimage').attr('src','fit/AA_fit.png');$('#country').text('Aruba');"><img src="menu/AA_flag.png" width="80" height="55" alt="Aruba"/>Aruba</div>
+<div onClick="$('#image').attr('src','data/AT_timeline.png');$('#fitimage').attr('src','fit/AT_fit.png');$('#country').text('Ashmore and Cartier Islands');"><img src="menu/AS_flag.png" width="80" height="55" alt="Ashmore and Cartier Islands"/>Ashmore and Cartier Islands</div>
+<div onClick="$('#image').attr('src','data/AS_timeline.png');$('#fitimage').attr('src','fit/AS_fit.png');$('#country').text('Australia');"><img src="menu/AS_flag.png" width="80" height="55" alt="Australia"/>Australia</div>
+<div onClick="$('#image').attr('src','data/AU_timeline.png');$('#fitimage').attr('src','fit/AU_fit.png');$('#country').text('Austria');"><img src="menu/AU_flag.png" width="80" height="55" alt="Austria"/>Austria</div>
+<div onClick="$('#image').attr('src','data/AJ_timeline.png');$('#fitimage').attr('src','fit/AJ_fit.png');$('#country').text('Azerbaijan');"><img src="menu/AJ_flag.png" width="80" height="55" alt="Azerbaijan"/>Azerbaijan</div>
+<div onClick="$('#image').attr('src','data/BF_timeline.png');$('#fitimage').attr('src','fit/BF_fit.png');$('#country').text('Bahamas, The');"><img src="menu/BF_flag.png" width="80" height="55" alt="Bahamas, The"/>Bahamas, The</div>
+<div onClick="$('#image').attr('src','data/BA_timeline.png');$('#fitimage').attr('src','fit/BA_fit.png');$('#country').text('Bahrain');"><img src="menu/BA_flag.png" width="80" height="55" alt="Bahrain"/>Bahrain</div>
+<div onClick="$('#image').attr('src','data/FQ_timeline.png');$('#fitimage').attr('src','fit/FQ_fit.png');$('#country').text('Baker Island');"><img src="menu/US_flag.png" width="80" height="55" alt="Baker Island"/>Baker Island</div>
+<div onClick="$('#image').attr('src','data/BG_timeline.png');$('#fitimage').attr('src','fit/BG_fit.png');$('#country').text('Bangladesh');"><img src="menu/BG_flag.png" width="80" height="55" alt="Bangladesh"/>Bangladesh</div>
+<div onClick="$('#image').attr('src','data/BB_timeline.png');$('#fitimage').attr('src','fit/BB_fit.png');$('#country').text('Barbados');"><img src="menu/BB_flag.png" width="80" height="55" alt="Barbados"/>Barbados</div>
+<div onClick="$('#image').attr('src','data/BS_timeline.png');$('#fitimage').attr('src','fit/BS_fit.png');$('#country').text('Bassas da India');"><img src="menu/BS_flag.png" width="80" height="55" alt="Bassas da India"/>Bassas da India</div>
+<div onClick="$('#image').attr('src','data/BO_timeline.png');$('#fitimage').attr('src','fit/BO_fit.png');$('#country').text('Belarus');"><img src="menu/BO_flag.png" width="80" height="55" alt="Belarus"/>Belarus</div>
+<div onClick="$('#image').attr('src','data/BE_timeline.png');$('#fitimage').attr('src','fit/BE_fit.png');$('#country').text('Belgium');"><img src="menu/BE_flag.png" width="80" height="55" alt="Belgium"/>Belgium</div>
+<div onClick="$('#image').attr('src','data/BH_timeline.png');$('#fitimage').attr('src','fit/BH_fit.png');$('#country').text('Belize');"><img src="menu/BH_flag.png" width="80" height="55" alt="Belize"/>Belize</div>
+<div onClick="$('#image').attr('src','data/BN_timeline.png');$('#fitimage').attr('src','fit/BN_fit.png');$('#country').text('Benin');"><img src="menu/BN_flag.png" width="80" height="55" alt="Benin"/>Benin</div>
+<div onClick="$('#image').attr('src','data/BD_timeline.png');$('#fitimage').attr('src','fit/BD_fit.png');$('#country').text('Bermuda');"><img src="menu/BD_flag.png" width="80" height="55" alt="Bermuda"/>Bermuda</div>
+<div onClick="$('#image').attr('src','data/BT_timeline.png');$('#fitimage').attr('src','fit/BT_fit.png');$('#country').text('Bhutan');"><img src="menu/BT_flag.png" width="80" height="55" alt="Bhutan"/>Bhutan</div>
+<div onClick="$('#image').attr('src','data/BL_timeline.png');$('#fitimage').attr('src','fit/BL_fit.png');$('#country').text('Bolivia');"><img src="menu/BL_flag.png" width="80" height="55" alt="Bolivia"/>Bolivia</div>
+<div onClick="$('#image').attr('src','data/BK_timeline.png');$('#fitimage').attr('src','fit/BK_fit.png');$('#country').text('Bosnia-Herzegovina');"><img src="menu/BK_flag.png" width="80" height="55" alt="Bosnia-Herzegovina"/>Bosnia-Herzegovina</div>
+<div onClick="$('#image').attr('src','data/BC_timeline.png');$('#fitimage').attr('src','fit/BC_fit.png');$('#country').text('Botswana');"><img src="menu/BC_flag.png" width="80" height="55" alt="Botswana"/>Botswana</div>
+<div onClick="$('#image').attr('src','data/BV_timeline.png');$('#fitimage').attr('src','fit/BV_fit.png');$('#country').text('Bouvet Island');"><img src="menu/NO_flag.png" width="80" height="55" alt="Bouvet Island"/>Bouvet Island</div>
+<div onClick="$('#image').attr('src','data/BR_timeline.png');$('#fitimage').attr('src','fit/BR_fit.png');$('#country').text('Brazil');"><img src="menu/BR_flag.png" width="80" height="55" alt="Brazil"/>Brazil</div>
+<div onClick="$('#image').attr('src','data/IO_timeline.png');$('#fitimage').attr('src','fit/IO_fit.png');$('#country').text('British Indian Ocean Territory');"><img src="menu/IO_flag.png" width="80" height="55" alt="British Indian Ocean Territory"/>British Indian Ocean Territory</div>
+<div onClick="$('#image').attr('src','data/VI_timeline.png');$('#fitimage').attr('src','fit/VI_fit.png');$('#country').text('British Virgin Islands');"><img src="menu/VI_flag.png" width="80" height="55" alt="British Virgin Islands"/>British Virgin Islands</div>
+<div onClick="$('#image').attr('src','data/BX_timeline.png');$('#fitimage').attr('src','fit/BX_fit.png');$('#country').text('Brunei');"><img src="menu/BX_flag.png" width="80" height="55" alt="Brunei"/>Brunei</div>
+<div onClick="$('#image').attr('src','data/BU_timeline.png');$('#fitimage').attr('src','fit/BU_fit.png');$('#country').text('Bulgaria');"><img src="menu/BU_flag.png" width="80" height="55" alt="Bulgaria"/>Bulgaria</div>
+<div onClick="$('#image').attr('src','data/UV_timeline.png');$('#fitimage').attr('src','fit/UV_fit.png');$('#country').text('Burkina Faso');"><img src="menu/UV_flag.png" width="80" height="55" alt="Burkina Faso"/>Burkina Faso</div>
+<div onClick="$('#image').attr('src','data/BY_timeline.png');$('#fitimage').attr('src','fit/BY_fit.png');$('#country').text('Burundi');"><img src="menu/BY_flag.png" width="80" height="55" alt="Burundi"/>Burundi</div>
+<div onClick="$('#image').attr('src','data/CB_timeline.png');$('#fitimage').attr('src','fit/CB_fit.png');$('#country').text('Cambodia');"><img src="menu/CB_flag.png" width="80" height="55" alt="Cambodia"/>Cambodia</div>
+<div onClick="$('#image').attr('src','data/CM_timeline.png');$('#fitimage').attr('src','fit/CM_fit.png');$('#country').text('Cameroon');"><img src="menu/CM_flag.png" width="80" height="55" alt="Cameroon"/>Cameroon</div>
+<div onClick="$('#image').attr('src','data/CA_timeline.png');$('#fitimage').attr('src','fit/CA_fit.png');$('#country').text('Canada');"><img src="menu/CA_flag.png" width="80" height="55" alt="Canada"/>Canada</div>
+<div onClick="$('#image').attr('src','data/CV_timeline.png');$('#fitimage').attr('src','fit/CV_fit.png');$('#country').text('Cape Verde');"><img src="menu/CV_flag.png" width="80" height="55" alt="Cape Verde"/>Cape Verde</div>
+<div onClick="$('#image').attr('src','data/CJ_timeline.png');$('#fitimage').attr('src','fit/CJ_fit.png');$('#country').text('Cayman Islands');"><img src="menu/CJ_flag.png" width="80" height="55" alt="Cayman Islands"/>Cayman Islands</div>
+<div onClick="$('#image').attr('src','data/CT_timeline.png');$('#fitimage').attr('src','fit/CT_fit.png');$('#country').text('Central African Republic');"><img src="menu/CT_flag.png" width="80" height="55" alt="Central African Republic"/>Central African Republic</div>
+<div onClick="$('#image').attr('src','data/CD_timeline.png');$('#fitimage').attr('src','fit/CD_fit.png');$('#country').text('Chad');"><img src="menu/CD_flag.png" width="80" height="55" alt="Chad"/>Chad</div>
+<div onClick="$('#image').attr('src','data/CI_timeline.png');$('#fitimage').attr('src','fit/CI_fit.png');$('#country').text('Chile');"><img src="menu/CI_flag.png" width="80" height="55" alt="Chile"/>Chile</div>
+<div onClick="$('#image').attr('src','data/CH_timeline.png');$('#fitimage').attr('src','fit/CH_fit.png');$('#country').text('China');"><img src="menu/CH_flag.png" width="80" height="55" alt="China"/>China</div>
+<div onClick="$('#image').attr('src','data/KT_timeline.png');$('#fitimage').attr('src','fit/KT_fit.png');$('#country').text('Christmas Island');"><img src="menu/KT_flag.png" width="80" height="55" alt="Christmas Island"/>Christmas Island</div>
+<div onClick="$('#image').attr('src','data/IP_timeline.png');$('#fitimage').attr('src','fit/IP_fit.png');$('#country').text('Clipperton Island');"><img src="menu/IP_flag.png" width="80" height="55" alt="Clipperton Island"/>Clipperton Island</div>
+<div onClick="$('#image').attr('src','data/CK_timeline.png');$('#fitimage').attr('src','fit/CK_fit.png');$('#country').text('Cocos (Keeling) Islands');"><img src="menu/CK_flag.png" width="80" height="55" alt="Cocos (Keeling) Islands"/>Cocos (Keeling) Islands</div>
+<div onClick="$('#image').attr('src','data/CO_timeline.png');$('#fitimage').attr('src','fit/CO_fit.png');$('#country').text('Colombia');"><img src="menu/CO_flag.png" width="80" height="55" alt="Colombia"/>Colombia</div>
+<div onClick="$('#image').attr('src','data/CN_timeline.png');$('#fitimage').attr('src','fit/CN_fit.png');$('#country').text('Comoros');"><img src="menu/CN_flag.png" width="80" height="55" alt="Comoros"/>Comoros</div>
+<div onClick="$('#image').attr('src','data/CF_timeline.png');$('#fitimage').attr('src','fit/CF_fit.png');$('#country').text('Congo');"><img src="menu/CF_flag.png" width="80" height="55" alt="Congo"/>Congo</div>
+<div onClick="$('#image').attr('src','data/CW_timeline.png');$('#fitimage').attr('src','fit/CW_fit.png');$('#country').text('Cook Islands');"><img src="menu/CW_flag.png" width="80" height="55" alt="Cook Islands"/>Cook Islands</div>
+<div onClick="$('#image').attr('src','data/CR_timeline.png');$('#fitimage').attr('src','fit/CR_fit.png');$('#country').text('Coral Sea Islands');"><img src="menu/AS_flag.png" width="80" height="55" alt="Coral Sea Islands"/>Coral Sea Islands</div>
+<div onClick="$('#image').attr('src','data/CS_timeline.png');$('#fitimage').attr('src','fit/CS_fit.png');$('#country').text('Costa Rica');"><img src="menu/CS_flag.png" width="80" height="55" alt="Costa Rica"/>Costa Rica</div>
+<div onClick="$('#image').attr('src','data/IV_timeline.png');$('#fitimage').attr('src','fit/IV_fit.png');$('#country').text('Cote d`Ivoire');"><img src="menu/IV_flag.png" width="80" height="55" alt="Cote d`Ivoire"/>Cote d`Ivoire</div>
+<div onClick="$('#image').attr('src','data/HR_timeline.png');$('#fitimage').attr('src','fit/HR_fit.png');$('#country').text('Croatia');"><img src="menu/HR_flag.png" width="80" height="55" alt="Croatia"/>Croatia</div>
+<div onClick="$('#image').attr('src','data/CU_timeline.png');$('#fitimage').attr('src','fit/CU_fit.png');$('#country').text('Cuba');"><img src="menu/CU_flag.png" width="80" height="55" alt="Cuba"/>Cuba</div>
+<div onClick="$('#image').attr('src','data/CY_timeline.png');$('#fitimage').attr('src','fit/CY_fit.png');$('#country').text('Cyprus');"><img src="menu/CY_flag.png" width="80" height="55" alt="Cyprus"/>Cyprus</div>
+<div onClick="$('#image').attr('src','data/EZ_timeline.png');$('#fitimage').attr('src','fit/EZ_fit.png');$('#country').text('Czech Republic');"><img src="menu/EZ_flag.png" width="80" height="55" alt="Czech Republic"/>Czech Republic</div>
+<div onClick="$('#image').attr('src','data/CG_timeline.png');$('#fitimage').attr('src','fit/CG_fit.png');$('#country').text('Democratic Republic of the Congo');"><img src="menu/CG_flag.png" width="80" height="55" alt="Democratic Republic of the Congo"/>Democratic Republic of the Congo</div>
+<div onClick="$('#image').attr('src','data/DA_timeline.png');$('#fitimage').attr('src','fit/DA_fit.png');$('#country').text('Denmark');"><img src="menu/DA_flag.png" width="80" height="55" alt="Denmark"/>Denmark</div>
+<div onClick="$('#image').attr('src','data/DX_timeline.png');$('#fitimage').attr('src','fit/DX_fit.png');$('#country').text('Dhekelia Sovereign Base Area');"><img src="menu/UK_flag.png" width="80" height="55" alt="Dhekelia Sovereign Base Area"/>Dhekelia Sovereign Base Area</div>
+<div onClick="$('#image').attr('src','data/DJ_timeline.png');$('#fitimage').attr('src','fit/DJ_fit.png');$('#country').text('Djibouti');"><img src="menu/DJ_flag.png" width="80" height="55" alt="Djibouti"/>Djibouti</div>
+<div onClick="$('#image').attr('src','data/DO_timeline.png');$('#fitimage').attr('src','fit/DO_fit.png');$('#country').text('Dominica');"><img src="menu/DO_flag.png" width="80" height="55" alt="Dominica"/>Dominica</div>
+<div onClick="$('#image').attr('src','data/DR_timeline.png');$('#fitimage').attr('src','fit/DR_fit.png');$('#country').text('Dominican Republic');"><img src="menu/DR_flag.png" width="80" height="55" alt="Dominican Republic"/>Dominican Republic</div>
+<div onClick="$('#image').attr('src','data/TT_timeline.png');$('#fitimage').attr('src','fit/TT_fit.png');$('#country').text('East Timor');"><img src="menu/TT_flag.png" width="80" height="55" alt="East Timor"/>East Timor</div>
+<div onClick="$('#image').attr('src','data/EC_timeline.png');$('#fitimage').attr('src','fit/EC_fit.png');$('#country').text('Ecuador');"><img src="menu/EC_flag.png" width="80" height="55" alt="Ecuador"/>Ecuador</div>
+<div onClick="$('#image').attr('src','data/EG_timeline.png');$('#fitimage').attr('src','fit/EG_fit.png');$('#country').text('Egypt');"><img src="menu/EG_flag.png" width="80" height="55" alt="Egypt"/>Egypt</div>
+<div onClick="$('#image').attr('src','data/ES_timeline.png');$('#fitimage').attr('src','fit/ES_fit.png');$('#country').text('El Salvador');"><img src="menu/ES_flag.png" width="80" height="55" alt="El Salvador"/>El Salvador</div>
+<div onClick="$('#image').attr('src','data/EK_timeline.png');$('#fitimage').attr('src','fit/EK_fit.png');$('#country').text('Equatorial Guinea');"><img src="menu/EK_flag.png" width="80" height="55" alt="Equatorial Guinea"/>Equatorial Guinea</div>
+<div onClick="$('#image').attr('src','data/ER_timeline.png');$('#fitimage').attr('src','fit/ER_fit.png');$('#country').text('Eritrea');"><img src="menu/ER_flag.png" width="80" height="55" alt="Eritrea"/>Eritrea</div>
+<div onClick="$('#image').attr('src','data/EN_timeline.png');$('#fitimage').attr('src','fit/EN_fit.png');$('#country').text('Estonia');"><img src="menu/EN_flag.png" width="80" height="55" alt="Estonia"/>Estonia</div>
+<div onClick="$('#image').attr('src','data/ET_timeline.png');$('#fitimage').attr('src','fit/ET_fit.png');$('#country').text('Ethiopia');"><img src="menu/ET_flag.png" width="80" height="55" alt="Ethiopia"/>Ethiopia</div>
+<div onClick="$('#image').attr('src','data/PJ_timeline.png');$('#fitimage').attr('src','fit/PJ_fit.png');$('#country').text('Etorofu, Habomai, Kunashiri and Shikotan Islands');"><img src="menu/PJ_flag.png" width="80" height="55" alt="Etorofu, Habomai, Kunashiri and Shikotan Islands"/>Etorofu, Habomai, Kunashiri and Shikotan Islands</div>
+<div onClick="$('#image').attr('src','data/EU_timeline.png');$('#fitimage').attr('src','fit/EU_fit.png');$('#country').text('Europa Island');"><img src="menu/bs_flag.png" width="80" height="55" alt="Europa Island"/>Europa Island</div>
+<div onClick="$('#image').attr('src','data/FK_timeline.png');$('#fitimage').attr('src','fit/FK_fit.png');$('#country').text('Falkland Islands (Islas Malvinas)');"><img src="menu/FK_flag.png" width="80" height="55" alt="Falkland Islands (Islas Malvinas)"/>Falkland Islands (Islas Malvinas)</div>
+<div onClick="$('#image').attr('src','data/FO_timeline.png');$('#fitimage').attr('src','fit/FO_fit.png');$('#country').text('Faroe Islands');"><img src="menu/FO_flag.png" width="80" height="55" alt="Faroe Islands"/>Faroe Islands</div>
+<div onClick="$('#image').attr('src','data/FJ_timeline.png');$('#fitimage').attr('src','fit/FJ_fit.png');$('#country').text('Fiji');"><img src="menu/FJ_flag.png" width="80" height="55" alt="Fiji"/>Fiji</div>
+<div onClick="$('#image').attr('src','data/FI_timeline.png');$('#fitimage').attr('src','fit/FI_fit.png');$('#country').text('Finland');"><img src="menu/FI_flag.png" width="80" height="55" alt="Finland"/>Finland</div>
+<div onClick="$('#image').attr('src','data/FR_timeline.png');$('#fitimage').attr('src','fit/FR_fit.png');$('#country').text('France');"><img src="menu/FR_flag.png" width="80" height="55" alt="France"/>France</div>
+<div onClick="$('#image').attr('src','data/FG_timeline.png');$('#fitimage').attr('src','fit/FG_fit.png');$('#country').text('French Guiana');"><img src="menu/FG_flag.png" width="80" height="55" alt="French Guiana"/>French Guiana</div>
+<div onClick="$('#image').attr('src','data/FP_timeline.png');$('#fitimage').attr('src','fit/FP_fit.png');$('#country').text('French Polynesia');"><img src="menu/FP_flag.png" width="80" height="55" alt="French Polynesia"/>French Polynesia</div>
+<div onClick="$('#image').attr('src','data/FS_timeline.png');$('#fitimage').attr('src','fit/FS_fit.png');$('#country').text('French Southern and Antarctic Lands');"><img src="menu/bs_flag.png" width="80" height="55" alt="French Southern and Antarctic Lands"/>French Southern and Antarctic Lands</div>
+<div onClick="$('#image').attr('src','data/GB_timeline.png');$('#fitimage').attr('src','fit/GB_fit.png');$('#country').text('Gabon');"><img src="menu/GB_flag.png" width="80" height="55" alt="Gabon"/>Gabon</div>
+<div onClick="$('#image').attr('src','data/GA_timeline.png');$('#fitimage').attr('src','fit/GA_fit.png');$('#country').text('Gambia');"><img src="menu/GA_flag.png" width="80" height="55" alt="Gambia"/>Gambia</div>
+<div onClick="$('#image').attr('src','data/GZ_timeline.png');$('#fitimage').attr('src','fit/GZ_fit.png');$('#country').text('Gaza Strip');"><img src="menu/GZ_flag.png" width="80" height="55" alt="Gaza Strip"/>Gaza Strip</div>
+<div onClick="$('#image').attr('src','data/GG_timeline.png');$('#fitimage').attr('src','fit/GG_fit.png');$('#country').text('Georgia');"><img src="menu/GG_flag.png" width="80" height="55" alt="Georgia"/>Georgia</div>
+<div onClick="$('#image').attr('src','data/GM_timeline.png');$('#fitimage').attr('src','fit/GM_fit.png');$('#country').text('Germany');"><img src="menu/GM_flag.png" width="80" height="55" alt="Germany"/>Germany</div>
+<div onClick="$('#image').attr('src','data/GH_timeline.png');$('#fitimage').attr('src','fit/GH_fit.png');$('#country').text('Ghana');"><img src="menu/GH_flag.png" width="80" height="55" alt="Ghana"/>Ghana</div>
+<div onClick="$('#image').attr('src','data/GI_timeline.png');$('#fitimage').attr('src','fit/GI_fit.png');$('#country').text('Gibraltar');"><img src="menu/GI_flag.png" width="80" height="55" alt="Gibraltar"/>Gibraltar</div>
+<div onClick="$('#image').attr('src','data/GO_timeline.png');$('#fitimage').attr('src','fit/GO_fit.png');$('#country').text('Glorioso Islands');"><img src="menu/bs_flag.png" width="80" height="55" alt="Glorioso Islands"/>Glorioso Islands</div>
+<div onClick="$('#image').attr('src','data/GR_timeline.png');$('#fitimage').attr('src','fit/GR_fit.png');$('#country').text('Greece');"><img src="menu/GR_flag.png" width="80" height="55" alt="Greece"/>Greece</div>
+<div onClick="$('#image').attr('src','data/GL_timeline.png');$('#fitimage').attr('src','fit/GL_fit.png');$('#country').text('Greenland');"><img src="menu/GL_flag.png" width="80" height="55" alt="Greenland"/>Greenland</div>
+<div onClick="$('#image').attr('src','data/GJ_timeline.png');$('#fitimage').attr('src','fit/GJ_fit.png');$('#country').text('Grenada');"><img src="menu/GJ_flag.png" width="80" height="55" alt="Grenada"/>Grenada</div>
+<div onClick="$('#image').attr('src','data/GP_timeline.png');$('#fitimage').attr('src','fit/GP_fit.png');$('#country').text('Guadeloupe');"><img src="menu/GP_flag.png" width="80" height="55" alt="Guadeloupe"/>Guadeloupe</div>
+<div onClick="$('#image').attr('src','data/GQ_timeline.png');$('#fitimage').attr('src','fit/GQ_fit.png');$('#country').text('Guam');"><img src="menu/GQ_flag.png" width="80" height="55" alt="Guam"/>Guam</div>
+<div onClick="$('#image').attr('src','data/GT_timeline.png');$('#fitimage').attr('src','fit/GT_fit.png');$('#country').text('Guatemala');"><img src="menu/GT_flag.png" width="80" height="55" alt="Guatemala"/>Guatemala</div>
+<div onClick="$('#image').attr('src','data/GK_timeline.png');$('#fitimage').attr('src','fit/GK_fit.png');$('#country').text('Guernsey');"><img src="menu/GK_flag.png" width="80" height="55" alt="Guernsey"/>Guernsey</div>
+<div onClick="$('#image').attr('src','data/GV_timeline.png');$('#fitimage').attr('src','fit/GV_fit.png');$('#country').text('Guinea');"><img src="menu/GV_flag.png" width="80" height="55" alt="Guinea"/>Guinea</div>
+<div onClick="$('#image').attr('src','data/PU_timeline.png');$('#fitimage').attr('src','fit/PU_fit.png');$('#country').text('Guinea-Bissau');"><img src="menu/PU_flag.png" width="80" height="55" alt="Guinea-Bissau"/>Guinea-Bissau</div>
+<div onClick="$('#image').attr('src','data/GY_timeline.png');$('#fitimage').attr('src','fit/GY_fit.png');$('#country').text('Guyana');"><img src="menu/GY_flag.png" width="80" height="55" alt="Guyana"/>Guyana</div>
+<div onClick="$('#image').attr('src','data/HA_timeline.png');$('#fitimage').attr('src','fit/HA_fit.png');$('#country').text('Haiti');"><img src="menu/HA_flag.png" width="80" height="55" alt="Haiti"/>Haiti</div>
+<div onClick="$('#image').attr('src','data/HM_timeline.png');$('#fitimage').attr('src','fit/HM_fit.png');$('#country').text('Heard Island and McDonald Islands');"><img src="menu/as_flag.png" width="80" height="55" alt="Heard Island and McDonald Islands"/>Heard Island and McDonald Islands</div>
+<div onClick="$('#image').attr('src','data/HO_timeline.png');$('#fitimage').attr('src','fit/HO_fit.png');$('#country').text('Honduras');"><img src="menu/HO_flag.png" width="80" height="55" alt="Honduras"/>Honduras</div>
+<div onClick="$('#image').attr('src','data/HK_timeline.png');$('#fitimage').attr('src','fit/HK_fit.png');$('#country').text('Hong Kong');"><img src="menu/HK_flag.png" width="80" height="55" alt="Hong Kong"/>Hong Kong</div>
+<div onClick="$('#image').attr('src','data/HQ_timeline.png');$('#fitimage').attr('src','fit/HQ_fit.png');$('#country').text('Howland Island');"><img src="menu/US_flag.png" width="80" height="55" alt="Howland Island"/>Howland Island</div>
+<div onClick="$('#image').attr('src','data/HU_timeline.png');$('#fitimage').attr('src','fit/HU_fit.png');$('#country').text('Hungary');"><img src="menu/HU_flag.png" width="80" height="55" alt="Hungary"/>Hungary</div>
+<div onClick="$('#image').attr('src','data/IC_timeline.png');$('#fitimage').attr('src','fit/IC_fit.png');$('#country').text('Iceland');"><img src="menu/IC_flag.png" width="80" height="55" alt="Iceland"/>Iceland</div>
+<div onClick="$('#image').attr('src','data/IN_timeline.png');$('#fitimage').attr('src','fit/IN_fit.png');$('#country').text('India');"><img src="menu/IN_flag.png" width="80" height="55" alt="India"/>India</div>
+<div onClick="$('#image').attr('src','data/ID_timeline.png');$('#fitimage').attr('src','fit/ID_fit.png');$('#country').text('Indonesia');"><img src="menu/ID_flag.png" width="80" height="55" alt="Indonesia"/>Indonesia</div>
+<div onClick="$('#image').attr('src','data/IR_timeline.png');$('#fitimage').attr('src','fit/IR_fit.png');$('#country').text('Iran');"><img src="menu/IR_flag.png" width="80" height="55" alt="Iran"/>Iran</div>
+<div onClick="$('#image').attr('src','data/IZ_timeline.png');$('#fitimage').attr('src','fit/IZ_fit.png');$('#country').text('Iraq');"><img src="menu/IZ_flag.png" width="80" height="55" alt="Iraq"/>Iraq</div>
+<div onClick="$('#image').attr('src','data/EI_timeline.png');$('#fitimage').attr('src','fit/EI_fit.png');$('#country').text('Ireland');"><img src="menu/EI_flag.png" width="80" height="55" alt="Ireland"/>Ireland</div>
+<div onClick="$('#image').attr('src','data/IM_timeline.png');$('#fitimage').attr('src','fit/IM_fit.png');$('#country').text('Isle of Man');"><img src="menu/IM_flag.png" width="80" height="55" alt="Isle of Man"/>Isle of Man</div>
+<div onClick="$('#image').attr('src','data/IS_timeline.png');$('#fitimage').attr('src','fit/IS_fit.png');$('#country').text('Israel');"><img src="menu/IS_flag.png" width="80" height="55" alt="Israel"/>Israel</div>
+<div onClick="$('#image').attr('src','data/IT_timeline.png');$('#fitimage').attr('src','fit/IT_fit.png');$('#country').text('Italy');"><img src="menu/IT_flag.png" width="80" height="55" alt="Italy"/>Italy</div>
+<div onClick="$('#image').attr('src','data/JM_timeline.png');$('#fitimage').attr('src','fit/JM_fit.png');$('#country').text('Jamaica');"><img src="menu/JM_flag.png" width="80" height="55" alt="Jamaica"/>Jamaica</div>
+<div onClick="$('#image').attr('src','data/JN_timeline.png');$('#fitimage').attr('src','fit/JN_fit.png');$('#country').text('Jan Mayen');"><img src="menu/NO_flag.png" width="80" height="55" alt="Jan Mayen"/>Jan Mayen</div>
+<div onClick="$('#image').attr('src','data/JA_timeline.png');$('#fitimage').attr('src','fit/JA_fit.png');$('#country').text('Japan');"><img src="menu/JA_flag.png" width="80" height="55" alt="Japan"/>Japan</div>
+<div onClick="$('#image').attr('src','data/DQ_timeline.png');$('#fitimage').attr('src','fit/DQ_fit.png');$('#country').text('Jarvis Island');"><img src="menu/US_flag.png" width="80" height="55" alt="Jarvis Island"/>Jarvis Island</div>
+<div onClick="$('#image').attr('src','data/JE_timeline.png');$('#fitimage').attr('src','fit/JE_fit.png');$('#country').text('Jersey');"><img src="menu/JE_flag.png" width="80" height="55" alt="Jersey"/>Jersey</div>
+<div onClick="$('#image').attr('src','data/JQ_timeline.png');$('#fitimage').attr('src','fit/JQ_fit.png');$('#country').text('Johnston Atoll');"><img src="menu/JQ_flag.png" width="80" height="55" alt="Johnston Atoll"/>Johnston Atoll</div>
+<div onClick="$('#image').attr('src','data/JO_timeline.png');$('#fitimage').attr('src','fit/JO_fit.png');$('#country').text('Jordan');"><img src="menu/JO_flag.png" width="80" height="55" alt="Jordan"/>Jordan</div>
+<div onClick="$('#image').attr('src','data/JU_timeline.png');$('#fitimage').attr('src','fit/JU_fit.png');$('#country').text('Juan de Nova Island');"><img src="menu/bs_flag.png" width="80" height="55" alt="Juan de Nova Island"/>Juan de Nova Island</div>
+<div onClick="$('#image').attr('src','data/KZ_timeline.png');$('#fitimage').attr('src','fit/KZ_fit.png');$('#country').text('Kazakhstan');"><img src="menu/KZ_flag.png" width="80" height="55" alt="Kazakhstan"/>Kazakhstan</div>
+<div onClick="$('#image').attr('src','data/KE_timeline.png');$('#fitimage').attr('src','fit/KE_fit.png');$('#country').text('Kenya');"><img src="menu/KE_flag.png" width="80" height="55" alt="Kenya"/>Kenya</div>
+<div onClick="$('#image').attr('src','data/KQ_timeline.png');$('#fitimage').attr('src','fit/KQ_fit.png');$('#country').text('Kingman Reef');"><img src="menu/US_flag.png" width="80" height="55" alt="Kingman Reef"/>Kingman Reef</div>
+<div onClick="$('#image').attr('src','data/KR_timeline.png');$('#fitimage').attr('src','fit/KR_fit.png');$('#country').text('Kiribati');"><img src="menu/KR_flag.png" width="80" height="55" alt="Kiribati"/>Kiribati</div>
+<div onClick="$('#image').attr('src','data/KV_timeline.png');$('#fitimage').attr('src','fit/KV_fit.png');$('#country').text('Kosovo');"><img src="menu/KV_flag.png" width="80" height="55" alt="Kosovo"/>Kosovo</div>
+<div onClick="$('#image').attr('src','data/KU_timeline.png');$('#fitimage').attr('src','fit/KU_fit.png');$('#country').text('Kuwait');"><img src="menu/KU_flag.png" width="80" height="55" alt="Kuwait"/>Kuwait</div>
+<div onClick="$('#image').attr('src','data/KG_timeline.png');$('#fitimage').attr('src','fit/KG_fit.png');$('#country').text('Kyrgyzstan');"><img src="menu/KG_flag.png" width="80" height="55" alt="Kyrgyzstan"/>Kyrgyzstan</div>
+<div onClick="$('#image').attr('src','data/LA_timeline.png');$('#fitimage').attr('src','fit/LA_fit.png');$('#country').text('Laos');"><img src="menu/LA_flag.png" width="80" height="55" alt="Laos"/>Laos</div>
+<div onClick="$('#image').attr('src','data/LG_timeline.png');$('#fitimage').attr('src','fit/LG_fit.png');$('#country').text('Latvia');"><img src="menu/LG_flag.png" width="80" height="55" alt="Latvia"/>Latvia</div>
+<div onClick="$('#image').attr('src','data/LE_timeline.png');$('#fitimage').attr('src','fit/LE_fit.png');$('#country').text('Lebanon');"><img src="menu/LE_flag.png" width="80" height="55" alt="Lebanon"/>Lebanon</div>
+<div onClick="$('#image').attr('src','data/LT_timeline.png');$('#fitimage').attr('src','fit/LT_fit.png');$('#country').text('Lesotho');"><img src="menu/LT_flag.png" width="80" height="55" alt="Lesotho"/>Lesotho</div>
+<div onClick="$('#image').attr('src','data/LI_timeline.png');$('#fitimage').attr('src','fit/LI_fit.png');$('#country').text('Liberia');"><img src="menu/LI_flag.png" width="80" height="55" alt="Liberia"/>Liberia</div>
+<div onClick="$('#image').attr('src','data/LY_timeline.png');$('#fitimage').attr('src','fit/LY_fit.png');$('#country').text('Libya');"><img src="menu/LY_flag.png" width="80" height="55" alt="Libya"/>Libya</div>
+<div onClick="$('#image').attr('src','data/LS_timeline.png');$('#fitimage').attr('src','fit/LS_fit.png');$('#country').text('Liechtenstein');"><img src="menu/LS_flag.png" width="80" height="55" alt="Liechtenstein"/>Liechtenstein</div>
+<div onClick="$('#image').attr('src','data/LH_timeline.png');$('#fitimage').attr('src','fit/LH_fit.png');$('#country').text('Lithuania');"><img src="menu/LH_flag.png" width="80" height="55" alt="Lithuania"/>Lithuania</div>
+<div onClick="$('#image').attr('src','data/LU_timeline.png');$('#fitimage').attr('src','fit/LU_fit.png');$('#country').text('Luxembourg');"><img src="menu/LU_flag.png" width="80" height="55" alt="Luxembourg"/>Luxembourg</div>
+<div onClick="$('#image').attr('src','data/MC_timeline.png');$('#fitimage').attr('src','fit/MC_fit.png');$('#country').text('Macau');"><img src="menu/MC_flag.png" width="80" height="55" alt="Macau"/>Macau</div>
+<div onClick="$('#image').attr('src','data/MK_timeline.png');$('#fitimage').attr('src','fit/MK_fit.png');$('#country').text('Macedonia');"><img src="menu/MK_flag.png" width="80" height="55" alt="Macedonia"/>Macedonia</div>
+<div onClick="$('#image').attr('src','data/MA_timeline.png');$('#fitimage').attr('src','fit/MA_fit.png');$('#country').text('Madagascar');"><img src="menu/MA_flag.png" width="80" height="55" alt="Madagascar"/>Madagascar</div>
+<div onClick="$('#image').attr('src','data/MI_timeline.png');$('#fitimage').attr('src','fit/MI_fit.png');$('#country').text('Malawi');"><img src="menu/MI_flag.png" width="80" height="55" alt="Malawi"/>Malawi</div>
+<div onClick="$('#image').attr('src','data/MY_timeline.png');$('#fitimage').attr('src','fit/MY_fit.png');$('#country').text('Malaysia');"><img src="menu/MY_flag.png" width="80" height="55" alt="Malaysia"/>Malaysia</div>
+<div onClick="$('#image').attr('src','data/MV_timeline.png');$('#fitimage').attr('src','fit/MV_fit.png');$('#country').text('Maldives');"><img src="menu/MV_flag.png" width="80" height="55" alt="Maldives"/>Maldives</div>
+<div onClick="$('#image').attr('src','data/ML_timeline.png');$('#fitimage').attr('src','fit/ML_fit.png');$('#country').text('Mali');"><img src="menu/ML_flag.png" width="80" height="55" alt="Mali"/>Mali</div>
+<div onClick="$('#image').attr('src','data/MT_timeline.png');$('#fitimage').attr('src','fit/MT_fit.png');$('#country').text('Malta');"><img src="menu/MT_flag.png" width="80" height="55" alt="Malta"/>Malta</div>
+<div onClick="$('#image').attr('src','data/RM_timeline.png');$('#fitimage').attr('src','fit/RM_fit.png');$('#country').text('Marshall Islands');"><img src="menu/RM_flag.png" width="80" height="55" alt="Marshall Islands"/>Marshall Islands</div>
+<div onClick="$('#image').attr('src','data/MB_timeline.png');$('#fitimage').attr('src','fit/MB_fit.png');$('#country').text('Martinique');"><img src="menu/MB_flag.png" width="80" height="55" alt="Martinique"/>Martinique</div>
+<div onClick="$('#image').attr('src','data/MR_timeline.png');$('#fitimage').attr('src','fit/MR_fit.png');$('#country').text('Mauritania');"><img src="menu/MR_flag.png" width="80" height="55" alt="Mauritania"/>Mauritania</div>
+<div onClick="$('#image').attr('src','data/MP_timeline.png');$('#fitimage').attr('src','fit/MP_fit.png');$('#country').text('Mauritius');"><img src="menu/MP_flag.png" width="80" height="55" alt="Mauritius"/>Mauritius</div>
+<div onClick="$('#image').attr('src','data/MF_timeline.png');$('#fitimage').attr('src','fit/MF_fit.png');$('#country').text('Mayotte');"><img src="menu/MF_flag.png" width="80" height="55" alt="Mayotte"/>Mayotte</div>
+<div onClick="$('#image').attr('src','data/MX_timeline.png');$('#fitimage').attr('src','fit/MX_fit.png');$('#country').text('Mexico');"><img src="menu/MX_flag.png" width="80" height="55" alt="Mexico"/>Mexico</div>
+<div onClick="$('#image').attr('src','data/FM_timeline.png');$('#fitimage').attr('src','fit/FM_fit.png');$('#country').text('Micronesia');"><img src="menu/FM_flag.png" width="80" height="55" alt="Micronesia"/>Micronesia</div>
+<div onClick="$('#image').attr('src','data/MQ_timeline.png');$('#fitimage').attr('src','fit/MQ_fit.png');$('#country').text('Midway Islands');"><img src="menu/MQ_flag.png" width="80" height="55" alt="Midway Islands"/>Midway Islands</div>
+<div onClick="$('#image').attr('src','data/MD_timeline.png');$('#fitimage').attr('src','fit/MD_fit.png');$('#country').text('Moldova');"><img src="menu/MD_flag.png" width="80" height="55" alt="Moldova"/>Moldova</div>
+<div onClick="$('#image').attr('src','data/MN_timeline.png');$('#fitimage').attr('src','fit/MN_fit.png');$('#country').text('Monaco');"><img src="menu/MN_flag.png" width="80" height="55" alt="Monaco"/>Monaco</div>
+<div onClick="$('#image').attr('src','data/MG_timeline.png');$('#fitimage').attr('src','fit/MG_fit.png');$('#country').text('Mongolia');"><img src="menu/MG_flag.png" width="80" height="55" alt="Mongolia"/>Mongolia</div>
+<div onClick="$('#image').attr('src','data/MJ_timeline.png');$('#fitimage').attr('src','fit/MJ_fit.png');$('#country').text('Montenegro');"><img src="menu/MJ_flag.png" width="80" height="55" alt="Montenegro"/>Montenegro</div>
+<div onClick="$('#image').attr('src','data/MH_timeline.png');$('#fitimage').attr('src','fit/MH_fit.png');$('#country').text('Montserrat');"><img src="menu/MH_flag.png" width="80" height="55" alt="Montserrat"/>Montserrat</div>
+<div onClick="$('#image').attr('src','data/MO_timeline.png');$('#fitimage').attr('src','fit/MO_fit.png');$('#country').text('Morocco');"><img src="menu/MO_flag.png" width="80" height="55" alt="Morocco"/>Morocco</div>
+<div onClick="$('#image').attr('src','data/MZ_timeline.png');$('#fitimage').attr('src','fit/MZ_fit.png');$('#country').text('Mozambique');"><img src="menu/MZ_flag.png" width="80" height="55" alt="Mozambique"/>Mozambique</div>
+<div onClick="$('#image').attr('src','data/BM_timeline.png');$('#fitimage').attr('src','fit/BM_fit.png');$('#country').text('Myanmar');"><img src="menu/BM_flag.png" width="80" height="55" alt="Myanmar"/>Myanmar</div>
+<div onClick="$('#image').attr('src','data/WA_timeline.png');$('#fitimage').attr('src','fit/WA_fit.png');$('#country').text('Namibia');"><img src="menu/WA_flag.png" width="80" height="55" alt="Namibia"/>Namibia</div>
+<div onClick="$('#image').attr('src','data/NR_timeline.png');$('#fitimage').attr('src','fit/NR_fit.png');$('#country').text('Nauru');"><img src="menu/NR_flag.png" width="80" height="55" alt="Nauru"/>Nauru</div>
+<div onClick="$('#image').attr('src','data/BQ_timeline.png');$('#fitimage').attr('src','fit/BQ_fit.png');$('#country').text('Navassa Island');"><img src="menu/US_flag.png" width="80" height="55" alt="Navassa Island"/>Navassa Island</div>
+<div onClick="$('#image').attr('src','data/NP_timeline.png');$('#fitimage').attr('src','fit/NP_fit.png');$('#country').text('Nepal');"><img src="menu/NP_flag.png" width="40" height="55" alt="Nepal"/>Nepal</div>
+<div onClick="$('#image').attr('src','data/NL_timeline.png');$('#fitimage').attr('src','fit/NL_fit.png');$('#country').text('Netherlands');"><img src="menu/NL_flag.png" width="80" height="55" alt="Netherlands"/>Netherlands</div>
+<div onClick="$('#image').attr('src','data/NT_timeline.png');$('#fitimage').attr('src','fit/NT_fit.png');$('#country').text('Netherlands Antilles');"><img src="menu/NT_flag.png" width="80" height="55" alt="Netherlands Antilles"/>Netherlands Antilles</div>
+<div onClick="$('#image').attr('src','data/NZ_timeline.png');$('#fitimage').attr('src','fit/NZ_fit.png');$('#country').text('New Zealand');"><img src="menu/NZ_flag.png" width="80" height="55" alt="New Zealand"/>New Zealand</div>
+<div onClick="$('#image').attr('src','data/NC_timeline.png');$('#fitimage').attr('src','fit/NC_fit.png');$('#country').text('New Caledonia');"><img src="menu/NC_flag.png" width="80" height="55" alt="New Caledonia"/>New Caledonia</div>
+<div onClick="$('#image').attr('src','data/NU_timeline.png');$('#fitimage').attr('src','fit/NU_fit.png');$('#country').text('Nicaragua');"><img src="menu/NU_flag.png" width="80" height="55" alt="Nicaragua"/>Nicaragua</div>
+<div onClick="$('#image').attr('src','data/NG_timeline.png');$('#fitimage').attr('src','fit/NG_fit.png');$('#country').text('Niger');"><img src="menu/NG_flag.png" width="80" height="55" alt="Niger"/>Niger</div>
+<div onClick="$('#image').attr('src','data/NI_timeline.png');$('#fitimage').attr('src','fit/NI_fit.png');$('#country').text('Nigeria');"><img src="menu/NI_flag.png" width="80" height="55" alt="Nigeria"/>Nigeria</div>
+<div onClick="$('#image').attr('src','data/NE_timeline.png');$('#fitimage').attr('src','fit/NE_fit.png');$('#country').text('Niue');"><img src="menu/NE_flag.png" width="80" height="55" alt="Niue"/>Niue</div>
+<div onClick="$('#image').attr('src','data/NM_timeline.png');$('#fitimage').attr('src','fit/NM_fit.png');$('#country').text('No Man`s Land');"><img src="menu/NM_flag.png" width="80" height="55" alt="No Man`s Land"/>No Man`s Land</div>
+<div onClick="$('#image').attr('src','data/NF_timeline.png');$('#fitimage').attr('src','fit/NF_fit.png');$('#country').text('Norfolk Island');"><img src="menu/NF_flag.png" width="80" height="55" alt="Norfolk Island"/>Norfolk Island</div>
+<div onClick="$('#image').attr('src','data/KN_timeline.png');$('#fitimage').attr('src','fit/KN_fit.png');$('#country').text('North Korea');"><img src="menu/KN_flag.png" width="80" height="55" alt="North Korea"/>North Korea</div>
+<div onClick="$('#image').attr('src','data/CQ_timeline.png');$('#fitimage').attr('src','fit/CQ_fit.png');$('#country').text('Northern Mariana Islands');"><img src="menu/CQ_flag.png" width="80" height="55" alt="Northern Mariana Islands"/>Northern Mariana Islands</div>
+<div onClick="$('#image').attr('src','data/NO_timeline.png');$('#fitimage').attr('src','fit/NO_fit.png');$('#country').text('Norway');"><img src="menu/NO_flag.png" width="80" height="55" alt="Norway"/>Norway</div>
+<div onClick="$('#image').attr('src','data/OS_timeline.png');$('#fitimage').attr('src','fit/OS_fit.png');$('#country').text('Oceans');"><img src="menu/OS_flag.png" width="80" height="55" alt="Oceans"/>Oceans</div>
+<div onClick="$('#image').attr('src','data/MU_timeline.png');$('#fitimage').attr('src','fit/MU_fit.png');$('#country').text('Oman');"><img src="menu/MU_flag.png" width="80" height="55" alt="Oman"/>Oman</div>
+<div onClick="$('#image').attr('src','data/PK_timeline.png');$('#fitimage').attr('src','fit/PK_fit.png');$('#country').text('Pakistan');"><img src="menu/PK_flag.png" width="80" height="55" alt="Pakistan"/>Pakistan</div>
+<div onClick="$('#image').attr('src','data/PS_timeline.png');$('#fitimage').attr('src','fit/PS_fit.png');$('#country').text('Palau');"><img src="menu/PS_flag.png" width="80" height="55" alt="Palau"/>Palau</div>
+<div onClick="$('#image').attr('src','data/WE_timeline.png');$('#fitimage').attr('src','fit/WE_fit.png');$('#country').text('Palestine (West Bank)');"><img src="menu/WE_flag.png" width="80" height="55" alt="Palestine (West Bank)"/>Palestine (West Bank)</div>
+<div onClick="$('#image').attr('src','data/LQ_timeline.png');$('#fitimage').attr('src','fit/LQ_fit.png');$('#country').text('Palmyra Atoll');"><img src="menu/US_flag.png" width="80" height="55" alt="Palmyra Atoll"/>Palmyra Atoll</div>
+<div onClick="$('#image').attr('src','data/PM_timeline.png');$('#fitimage').attr('src','fit/PM_fit.png');$('#country').text('Panama');"><img src="menu/PM_flag.png" width="80" height="55" alt="Panama"/>Panama</div>
+<div onClick="$('#image').attr('src','data/PP_timeline.png');$('#fitimage').attr('src','fit/PP_fit.png');$('#country').text('Papua New Guinea');"><img src="menu/PP_flag.png" width="80" height="55" alt="Papua New Guinea"/>Papua New Guinea</div>
+<div onClick="$('#image').attr('src','data/PF_timeline.png');$('#fitimage').attr('src','fit/PF_fit.png');$('#country').text('Paracel Islands');"><img src="menu/nm_flag.png" width="80" height="55" alt="Paracel Islands"/>Paracel Islands</div>
+<div onClick="$('#image').attr('src','data/PA_timeline.png');$('#fitimage').attr('src','fit/PA_fit.png');$('#country').text('Paraguay');"><img src="menu/PA_flag.png" width="80" height="55" alt="Paraguay"/>Paraguay</div>
+<div onClick="$('#image').attr('src','data/PE_timeline.png');$('#fitimage').attr('src','fit/PE_fit.png');$('#country').text('Peru');"><img src="menu/PE_flag.png" width="80" height="55" alt="Peru"/>Peru</div>
+<div onClick="$('#image').attr('src','data/PC_timeline.png');$('#fitimage').attr('src','fit/PC_fit.png');$('#country').text('Pitcairn Islands');"><img src="menu/PC_flag.png" width="80" height="55" alt="Pitcairn Islands"/>Pitcairn Islands</div>
+<div onClick="$('#image').attr('src','data/RP_timeline.png');$('#fitimage').attr('src','fit/RP_fit.png');$('#country').text('Philippines');"><img src="menu/RP_flag.png" width="80" height="55" alt="Philippines"/>Philippines</div>
+<div onClick="$('#image').attr('src','data/PL_timeline.png');$('#fitimage').attr('src','fit/PL_fit.png');$('#country').text('Poland');"><img src="menu/PL_flag.png" width="80" height="55" alt="Poland"/>Poland</div>
+<div onClick="$('#image').attr('src','data/RQ_timeline.png');$('#fitimage').attr('src','fit/RQ_fit.png');$('#country').text('Puerto Rico');"><img src="menu/RQ_flag.png" width="80" height="55" alt="Puerto Rico"/>Puerto Rico</div>
+<div onClick="$('#image').attr('src','data/PO_timeline.png');$('#fitimage').attr('src','fit/PO_fit.png');$('#country').text('Portugal');"><img src="menu/PO_flag.png" width="80" height="55" alt="Portugal"/>Portugal</div>
+<div onClick="$('#image').attr('src','data/QA_timeline.png');$('#fitimage').attr('src','fit/QA_fit.png');$('#country').text('Qatar');"><img src="menu/QA_flag.png" width="80" height="55" alt="Qatar"/>Qatar</div>
+<div onClick="$('#image').attr('src','data/RE_timeline.png');$('#fitimage').attr('src','fit/RE_fit.png');$('#country').text('Reunion');"><img src="menu/FR_flag.png" width="80" height="55" alt="Reunion"/>Reunion</div>
+<div onClick="$('#image').attr('src','data/RO_timeline.png');$('#fitimage').attr('src','fit/RO_fit.png');$('#country').text('Romania');"><img src="menu/RO_flag.png" width="80" height="55" alt="Romania"/>Romania</div>
+<div onClick="$('#image').attr('src','data/RS_timeline.png');$('#fitimage').attr('src','fit/RS_fit.png');$('#country').text('Russia');"><img src="menu/RS_flag.png" width="80" height="55" alt="Russia"/>Russia</div>
+<div onClick="$('#image').attr('src','data/RW_timeline.png');$('#fitimage').attr('src','fit/RW_fit.png');$('#country').text('Rwanda');"><img src="menu/RW_flag.png" width="80" height="55" alt="Rwanda"/>Rwanda</div>
+<div onClick="$('#image').attr('src','data/SH_timeline.png');$('#fitimage').attr('src','fit/SH_fit.png');$('#country').text('Saint Helena');"><img src="menu/SH_flag.png" width="80" height="55" alt="Saint Helena"/>Saint Helena</div>
+<div onClick="$('#image').attr('src','data/SC_timeline.png');$('#fitimage').attr('src','fit/SC_fit.png');$('#country').text('Saint Kitts and Nevis');"><img src="menu/SC_flag.png" width="80" height="55" alt="Saint Kitts and Nevis"/>Saint Kitts and Nevis</div>
+<div onClick="$('#image').attr('src','data/ST_timeline.png');$('#fitimage').attr('src','fit/ST_fit.png');$('#country').text('Saint Lucia');"><img src="menu/ST_flag.png" width="80" height="55" alt="Saint Lucia"/>Saint Lucia</div>
+<div onClick="$('#image').attr('src','data/RN_timeline.png');$('#fitimage').attr('src','fit/RN_fit.png');$('#country').text('Saint Martin');"><img src="menu/RN_flag.png" width="80" height="55" alt="Saint Martin"/>Saint Martin</div>
+<div onClick="$('#image').attr('src','data/SB_timeline.png');$('#fitimage').attr('src','fit/SB_fit.png');$('#country').text('Saint Pierre and Miquelon');"><img src="menu/SB_flag.png" width="80" height="55" alt="Saint Pierre and Miquelon"/>Saint Pierre and Miquelon</div>
+<div onClick="$('#image').attr('src','data/VC_timeline.png');$('#fitimage').attr('src','fit/VC_fit.png');$('#country').text('Saint Vincent and the Grenadines');"><img src="menu/VC_flag.png" width="80" height="55" alt="Saint Vincent and the Grenadines"/>Saint Vincent and the Grenadines</div>
+<div onClick="$('#image').attr('src','data/TB_timeline.png');$('#fitimage').attr('src','fit/TB_fit.png');$('#country').text('Saint-Barthelemy Island');"><img src="menu/FR_flag.png" width="80" height="55" alt="Saint-Barthelemy Island"/>Saint-Barthelemy Island</div>
+<div onClick="$('#image').attr('src','data/WS_timeline.png');$('#fitimage').attr('src','fit/WS_fit.png');$('#country').text('Samoa');"><img src="menu/WS_flag.png" width="80" height="55" alt="Samoa"/>Samoa</div>
+<div onClick="$('#image').attr('src','data/SM_timeline.png');$('#fitimage').attr('src','fit/SM_fit.png');$('#country').text('San Marino');"><img src="menu/SM_flag.png" width="80" height="55" alt="San Marino"/>San Marino</div>
+<div onClick="$('#image').attr('src','data/TP_timeline.png');$('#fitimage').attr('src','fit/TP_fit.png');$('#country').text('Sao Tome and Principe');"><img src="menu/TP_flag.png" width="80" height="55" alt="Sao Tome and Principe"/>Sao Tome and Principe</div>
+<div onClick="$('#image').attr('src','data/SA_timeline.png');$('#fitimage').attr('src','fit/SA_fit.png');$('#country').text('Saudi Arabia');"><img src="menu/SA_flag.png" width="80" height="55" alt="Saudi Arabia"/>Saudi Arabia</div>
+<div onClick="$('#image').attr('src','data/RI_timeline.png');$('#fitimage').attr('src','fit/RI_fit.png');$('#country').text('Serbia');"><img src="menu/RI_flag.png" width="80" height="55" alt="Serbia"/>Serbia</div>
+<div onClick="$('#image').attr('src','data/SE_timeline.png');$('#fitimage').attr('src','fit/SE_fit.png');$('#country').text('Seychelles');"><img src="menu/SE_flag.png" width="80" height="55" alt="Seychelles"/>Seychelles</div>
+<div onClick="$('#image').attr('src','data/SL_timeline.png');$('#fitimage').attr('src','fit/SL_fit.png');$('#country').text('Sierra Leone');"><img src="menu/SL_flag.png" width="80" height="55" alt="Sierra Leone"/>Sierra Leone</div>
+<div onClick="$('#image').attr('src','data/SN_timeline.png');$('#fitimage').attr('src','fit/SN_fit.png');$('#country').text('Singapore');"><img src="menu/SN_flag.png" width="80" height="55" alt="Singapore"/>Singapore</div>
+<div onClick="$('#image').attr('src','data/LO_timeline.png');$('#fitimage').attr('src','fit/LO_fit.png');$('#country').text('Slovak Republic');"><img src="menu/LO_flag.png" width="80" height="55" alt="Slovak Republic"/>Slovak Republic</div>
+<div onClick="$('#image').attr('src','data/SI_timeline.png');$('#fitimage').attr('src','fit/SI_fit.png');$('#country').text('Slovenia');"><img src="menu/SI_flag.png" width="80" height="55" alt="Slovenia"/>Slovenia</div>
+<div onClick="$('#image').attr('src','data/BP_timeline.png');$('#fitimage').attr('src','fit/BP_fit.png');$('#country').text('Solomon Islands');"><img src="menu/BP_flag.png" width="80" height="55" alt="Solomon Islands"/>Solomon Islands</div>
+<div onClick="$('#image').attr('src','data/SO_timeline.png');$('#fitimage').attr('src','fit/SO_fit.png');$('#country').text('Somalia');"><img src="menu/SO_flag.png" width="80" height="55" alt="Somalia"/>Somalia</div>
+<div onClick="$('#image').attr('src','data/SF_timeline.png');$('#fitimage').attr('src','fit/SF_fit.png');$('#country').text('South Africa');"><img src="menu/SF_flag.png" width="80" height="55" alt="South Africa"/>South Africa</div>
+<div onClick="$('#image').attr('src','data/SX_timeline.png');$('#fitimage').attr('src','fit/SX_fit.png');$('#country').text('South Georgia and the South Sandwich Islands');"><img src="menu/SX_flag.png" width="80" height="55" alt="South Georgia and the South Sandwich Islands"/>South Georgia and the South Sandwich Islands</div>
+<div onClick="$('#image').attr('src','data/KS_timeline.png');$('#fitimage').attr('src','fit/KS_fit.png');$('#country').text('South Korea');"><img src="menu/KS_flag.png" width="80" height="55" alt="South Korea"/>South Korea</div>
+<div onClick="$('#image').attr('src','data/OD_timeline.png');$('#fitimage').attr('src','fit/OD_fit.png');$('#country').text('South Sudan');"><img src="menu/OD_flag.png" width="80" height="55" alt="South Sudan"/>South Sudan</div>
+<div onClick="$('#image').attr('src','data/SP_timeline.png');$('#fitimage').attr('src','fit/SP_fit.png');$('#country').text('Spain');"><img src="menu/SP_flag.png" width="80" height="55" alt="Spain"/>Spain</div>
+<div onClick="$('#image').attr('src','data/PG_timeline.png');$('#fitimage').attr('src','fit/PG_fit.png');$('#country').text('Spratly Islands');"><img src="menu/nm_flag.png" width="80" height="55" alt="Spratly Islands"/>Spratly Islands</div>
+<div onClick="$('#image').attr('src','data/CE_timeline.png');$('#fitimage').attr('src','fit/CE_fit.png');$('#country').text('Sri Lanka');"><img src="menu/CE_flag.png" width="80" height="55" alt="Sri Lanka"/>Sri Lanka</div>
+<div onClick="$('#image').attr('src','data/SU_timeline.png');$('#fitimage').attr('src','fit/SU_fit.png');$('#country').text('Sudan');"><img src="menu/SU_flag.png" width="80" height="55" alt="Sudan"/>Sudan</div>
+<div onClick="$('#image').attr('src','data/NS_timeline.png');$('#fitimage').attr('src','fit/NS_fit.png');$('#country').text('Suriname');"><img src="menu/NS_flag.png" width="80" height="55" alt="Suriname"/>Suriname</div>
+<div onClick="$('#image').attr('src','data/SV_timeline.png');$('#fitimage').attr('src','fit/SV_fit.png');$('#country').text('Svalbard');"><img src="menu/NO_flag.png" width="80" height="55" alt="Svalbard"/>Svalbard</div>
+<div onClick="$('#image').attr('src','data/WZ_timeline.png');$('#fitimage').attr('src','fit/WZ_fit.png');$('#country').text('Swaziland');"><img src="menu/WZ_flag.png" width="80" height="55" alt="Swaziland"/>Swaziland</div>
+<div onClick="$('#image').attr('src','data/SW_timeline.png');$('#fitimage').attr('src','fit/SW_fit.png');$('#country').text('Sweden');"><img src="menu/SW_flag.png" width="80" height="55" alt="Sweden"/>Sweden</div>
+<div onClick="$('#image').attr('src','data/SZ_timeline.png');$('#fitimage').attr('src','fit/SZ_fit.png');$('#country').text('Switzerland');"><img src="menu/SZ_flag.png" width="55" height="55" alt="Switzerland"/>Switzerland</div>
+<div onClick="$('#image').attr('src','data/SY_timeline.png');$('#fitimage').attr('src','fit/SY_fit.png');$('#country').text('Syria');"><img src="menu/SY_flag.png" width="80" height="55" alt="Syria"/>Syria</div>
+<div onClick="$('#image').attr('src','data/TW_timeline.png');$('#fitimage').attr('src','fit/TW_fit.png');$('#country').text('Taiwan');"><img src="menu/TW_flag.png" width="80" height="55" alt="Taiwan"/>Taiwan</div>
+<div onClick="$('#image').attr('src','data/TI_timeline.png');$('#fitimage').attr('src','fit/TI_fit.png');$('#country').text('Tajikistan');"><img src="menu/TI_flag.png" width="80" height="55" alt="Tajikistan"/>Tajikistan</div>
+<div onClick="$('#image').attr('src','data/TZ_timeline.png');$('#fitimage').attr('src','fit/TZ_fit.png');$('#country').text('Tanzania');"><img src="menu/TZ_flag.png" width="80" height="55" alt="Tanzania"/>Tanzania</div>
+<div onClick="$('#image').attr('src','data/TH_timeline.png');$('#fitimage').attr('src','fit/TH_fit.png');$('#country').text('Thailand');"><img src="menu/TH_flag.png" width="80" height="55" alt="Thailand"/>Thailand</div>
+<div onClick="$('#image').attr('src','data/TO_timeline.png');$('#fitimage').attr('src','fit/TO_fit.png');$('#country').text('Togo');"><img src="menu/TO_flag.png" width="80" height="55" alt="Togo"/>Togo</div>
+<div onClick="$('#image').attr('src','data/TL_timeline.png');$('#fitimage').attr('src','fit/TL_fit.png');$('#country').text('Tokelau');"><img src="menu/TL_flag.png" width="80" height="55" alt="Tokelau"/>Tokelau</div>
+<div onClick="$('#image').attr('src','data/TN_timeline.png');$('#fitimage').attr('src','fit/TN_fit.png');$('#country').text('Tonga');"><img src="menu/TN_flag.png" width="80" height="55" alt="Tonga"/>Tonga</div>
+<div onClick="$('#image').attr('src','data/TD_timeline.png');$('#fitimage').attr('src','fit/TD_fit.png');$('#country').text('Trinidad and Tobago');"><img src="menu/TD_flag.png" width="80" height="55" alt="Trinidad and Tobago"/>Trinidad and Tobago</div>
+<div onClick="$('#image').attr('src','data/TE_timeline.png');$('#fitimage').attr('src','fit/TE_fit.png');$('#country').text('Tromelin Island');"><img src="menu/BS_flag.png" width="80" height="55" alt="Tromelin Island"/>Tromelin Island</div>
+<div onClick="$('#image').attr('src','data/TS_timeline.png');$('#fitimage').attr('src','fit/TS_fit.png');$('#country').text('Tunisia');"><img src="menu/TS_flag.png" width="80" height="55" alt="Tunisia"/>Tunisia</div>
+<div onClick="$('#image').attr('src','data/TU_timeline.png');$('#fitimage').attr('src','fit/TU_fit.png');$('#country').text('Turkey');"><img src="menu/TU_flag.png" width="80" height="55" alt="Turkey"/>Turkey</div>
+<div onClick="$('#image').attr('src','data/TX_timeline.png');$('#fitimage').attr('src','fit/TX_fit.png');$('#country').text('Turkmenistan');"><img src="menu/TX_flag.png" width="80" height="55" alt="Turkmenistan"/>Turkmenistan</div>
+<div onClick="$('#image').attr('src','data/TK_timeline.png');$('#fitimage').attr('src','fit/TK_fit.png');$('#country').text('Turks and Caicos Islands');"><img src="menu/TK_flag.png" width="80" height="55" alt="Turks and Caicos Islands"/>Turks and Caicos Islands</div>
+<div onClick="$('#image').attr('src','data/TV_timeline.png');$('#fitimage').attr('src','fit/TV_fit.png');$('#country').text('Tuvalu');"><img src="menu/TV_flag.png" width="80" height="55" alt="Tuvalu"/>Tuvalu</div>
+<div onClick="$('#image').attr('src','data/UG_timeline.png');$('#fitimage').attr('src','fit/UG_fit.png');$('#country').text('Uganda');"><img src="menu/UG_flag.png" width="80" height="55" alt="Uganda"/>Uganda</div>
+<div onClick="$('#image').attr('src','data/UP_timeline.png');$('#fitimage').attr('src','fit/UP_fit.png');$('#country').text('Ukraine');"><img src="menu/UP_flag.png"	 width="80" height="55" alt="Ukraine"/>Ukraine</div>
+<div onClick="$('#image').attr('src','data/UF_timeline.png');$('#fitimage').attr('src','fit/UF_fit.png');$('#country').text('Undersea Features');"><img src="menu/OS_flag.png" width="80" height="55" alt="Undersea Features"/>Undersea Features</div>
+<div onClick="$('#image').attr('src','data/UU_timeline.png');$('#fitimage').attr('src','fit/UU_fit.png');$('#country').text('Undesignated Sovereignty');"><img src="menu/NM_flag.png" width="80" height="55" alt="Undesignated Sovereignty"/>Undesignated Sovereignty</div>
+<div onClick="$('#image').attr('src','data/AE_timeline.png');$('#fitimage').attr('src','fit/AE_fit.png');$('#country').text('United Arab Emirates');"><img src="menu/AE_flag.png" width="80" height="55" alt="United Arab Emirates"/>United Arab Emirates</div>
+<div onClick="$('#image').attr('src','data/UK_timeline.png');$('#fitimage').attr('src','fit/UK_fit.png');$('#country').text('United Kingdom');"><img src="menu/UK_flag.png" width="80" height="55" alt="United Kingdom"/>United Kingdom</div>
+<div onClick="$('#image').attr('src','data/US_timeline.png');$('#fitimage').attr('src','fit/US_fit.png');$('#country').text('United States');"><img src="menu/US_flag.png" width="80" height="55" alt="United States"/>United States</div>
+<div onClick="$('#image').attr('src','data/UY_timeline.png');$('#fitimage').attr('src','fit/UY_fit.png');$('#country').text('Uruguay');"><img src="menu/UY_flag.png" width="80" height="55" alt="Uruguay"/>Uruguay</div>
+<div onClick="$('#image').attr('src','data/UZ_timeline.png');$('#fitimage').attr('src','fit/UZ_fit.png');$('#country').text('Uzbekistan');"><img src="menu/UZ_flag.png" width="80" height="55" alt="Uzbekistan"/>Uzbekistan</div>
+<div onClick="$('#image').attr('src','data/NH_timeline.png');$('#fitimage').attr('src','fit/NH_fit.png');$('#country').text('Vanuatu');"><img src="menu/NH_flag.png" width="80" height="55" alt="Vanuatu"/>Vanuatu</div>
+<div onClick="$('#image').attr('src','data/VT_timeline.png');$('#fitimage').attr('src','fit/VT_fit.png');$('#country').text('Vatican City');"><img src="menu/VT_flag.png" width="80" height="55" alt="Vatican City"/>Vatican City</div>
+<div onClick="$('#image').attr('src','data/VE_timeline.png');$('#fitimage').attr('src','fit/VE_fit.png');$('#country').text('Venezuela');"><img src="menu/VE_flag.png" width="80" height="55" alt="Venezuela"/>Venezuela</div>
+<div onClick="$('#image').attr('src','data/VM_timeline.png');$('#fitimage').attr('src','fit/VM_fit.png');$('#country').text('Vietnam, Republic of');"><img src="menu/VM_flag.png" width="80" height="55" alt="Vietnam, Republic of"/>Vietnam, Republic of</div>
+<div onClick="$('#image').attr('src','data/VQ_timeline.png');$('#fitimage').attr('src','fit/VQ_fit.png');$('#country').text('Virgin Islands');"><img src="menu/VQ_flag.png" width="80" height="55" alt="Virgin Islands"/>Virgin Islands</div>
+<div onClick="$('#image').attr('src','data/WQ_timeline.png');$('#fitimage').attr('src','fit/WQ_fit.png');$('#country').text('Wake Island');"><img src="menu/WQ_flag.png" width="80" height="55" alt="Wake Island"/>Wake Island</div>
+<div onClick="$('#image').attr('src','data/WF_timeline.png');$('#fitimage').attr('src','fit/WF_fit.png');$('#country').text('Wallis and Futuna');"><img src="menu/WF_flag.png" width="80" height="55" alt="Wallis and Futuna"/>Wallis and Futuna</div>
+<div onClick="$('#image').attr('src','data/WI_timeline.png');$('#fitimage').attr('src','fit/WI_fit.png');$('#country').text('Western Sahara');"><img src="menu/WI_flag.png" width="80" height="55" alt="Western Sahara"/>Western Sahara</div>
+<div onClick="$('#image').attr('src','data/YM_timeline.png');$('#fitimage').attr('src','fit/YM_fit.png');$('#country').text('Yemen');"><img src="menu/YM_flag.png" width="80" height="55" alt="Yemen"/>Yemen</div>
+<div onClick="$('#image').attr('src','data/ZA_timeline.png');$('#fitimage').attr('src','fit/ZA_fit.png');$('#country').text('Zambia');"><img src="menu/ZA_flag.png" width="80" height="55" alt="Zambia"/>Zambia</div>
+<div onClick="$('#image').attr('src','data/ZI_timeline.png');$('#fitimage').attr('src','fit/ZI_fit.png');$('#country').text('Zimbabwe');"><img src="menu/ZI_flag.png" width="80" height="55" alt="Zimbabwe"/>Zimbabwe</div>
+<div onClick="$('#image').attr('src','data/WD_timeline.png');$('#fitimage').attr('src','fit/WD_fit.png');$('#country').text('World');"><img src="menu/WD_flag.png" width="80" height="55" alt="World"/>World</div>	
+<p style="height:1800px;"></p>
+    </div>
+	</div>
+	</header>
+      <div id="wrapper">
+         <div id="centerWrapper" >
+            <div id="tileContainer">
+               <a href="#&1980" id="groupTitle0" onclick="javascript:$group.goTo(0);"></a>
+               <a href="#&1985" id="groupTitle1" onclick="javascript:$group.goTo(1);"></a>
+               <a href="#&1990" id="groupTitle2" onclick="javascript:$group.goTo(2);"></a>
+               <a href="#&1995" id="groupTitle3" onclick="javascript:$group.goTo(3);"></a>
+               <a href="#&2000" id="groupTitle4" onclick="javascript:$group.goTo(4);"></a>
+               <a href="#&2005" id="groupTitle5" onclick="javascript:$group.goTo(5);"></a>
+               <a href="#&2010" id="groupTitle6" onclick="javascript:$group.goTo(6);"></a>
+               <a href="#&2014" id="groupTitle7" onclick="javascript:$group.goTo(7);"></a>
+			   <div href="#&contact" id="groupTitle8" style="margin-left:21300px;" onclick="javascript:$group.goTo(8);"></div>
+               <!--tile 1-->
+               <div  class="tile group0 noClick" style="
+                  margin-top:0px; margin-left:0px; 
+                  width:23200px; height:640px;
+                  background:#fff;"  data-pos='0-0-23200' >
+                  <div style="margin-left:-3000px; margin-top:-30px; ">
+				  <img id="fitimage" style="z-index:7; opacity:1; position:absolute; left:-3000px; display:none;" alt="fit" src="fit/AF_fit.png" height=700></div>
+				  <img id="image" style="z-index:6; position:absolute; left:-3000px;" alt="data" src="data/AF_timeline.png" height=700>
+               </div>
+               <!--tile 2-1-->
+               <div  id="tileScroll0_3-1" class="tile tileScroll group8 noClick " style="
+                  margin-top:200px; margin-left:21145px; z-index:800;
+                  width:300px; height:145px;
+                  background:#008198;"  data-pos='200-21145-300' >
+                  <div class='tileTitle' style='margin-left:10px;'>Get in touch</div>
+                  <div class='divScroll' style='margin-left:12px;'>Currently I am based in Abu Dhabi.<br />(+ 4:00 GMT, + 8:00 EST)</div>
+                  <script>scrollTile("0_3-1", ["Currently I am based in Abu Dhabi.<br/>(+ 4:00 GMT, + 8:00 EST)",
+                     "You can contact me via Email, Facebook, LinkedIn or Skype ..",
+                     "in English, Hungarian or Romanian.<br/>But I will also understand French or German.",
+                     "Please also visit my other websites:</br><b></br><a href='http://www.arc-initiative.org' target='_blank'>ARC initiative</a></br><a href='http://www.blueflower.me' target='_blank'>blue flower project</a></b>"], 5000, 0)
+                  </script> 
+               </div>
+               <!--tile 2-2-->                      
+               <div class="tile group8 noClick" style="
+                  margin-top:200px; margin-left:20990px; z-index:800;
+                  width:145px; height:145px;
+                  background:#008198; padding:0;"  data-pos='200-20990-145'>
+                  <div class='tileDesc' style='margin-left:10px; font-size:9px;'>
+                     <br/><br/><a href="http://www.csaladen.es">http://www.csaladen.es</a>
+                     <br/><br/><br/><a href="mailto:mail@csaladen.es">mail <img src='kukk.png' alt="kukac" style="width:11px;" /> csaladen.es</a>
+                     <br/><a href="mailto:dcsala@masdar.ac.ae">dcsala <img src='kukk.png' alt="kukac" style="width:11px;" /> masdar.ac.ae</a>
+                     <br/><a href="mailto:denes@mit.edu">denes <img src='kukk.png' alt="kukac" style="width:11px;" /> mit.edu</a>
+                     <br/><a href="mailto:denes@arc-initiative.org">denes <img src='kukk.png' alt="kukac" style="width:11px;" /> arc-initiative.org</a>
+                  </div>
+               </div>
+               <!--tile 2-3-->                      
+               <div  class="tile group8 noClick" style="
+                  margin-top:355px; margin-left:20990px; z-index:800;
+                  width:300px; height:145px;
+                  background:#008198; padding:0;"  data-pos='355-20990-300'>
+                  <div class='tileDesc' style='margin-left:12px;'><br /><b>Dénes Csala</b>
+                     <br/>Graduate Research Assistant
+                     <br/>Sustainable Sociotechnical Transitions Group
+                     <br/>Engineering Systems & Management Program
+                     <br/>Masdar Institute of Science and Technology
+                     <br/>Abu Dhabi, United Arab Emirates<br />
+                  </div>
+               </div>
+               <!--tile 2-4-->                      
+               <div  class="tile group8 noClick" style="
+                  margin-top:355px; margin-left:21300px; z-index:800;
+                  width:145px; height:145px;
+                  padding:0;"  data-pos='355-21300-145'> 
+               <img src='mail.png' alt="contact" style="width:145px;" usemap="#metroid" ismap="ismap" border="0"/> 
+               </div>
+               <map name="metroid">
+                  <area shape="rect" coords="0,0,70,70" href="mailto:dcsala@masdar.ac.ae" alt="">
+                  <area shape="rect" coords="0,75,70,145" href="http://www.linkedin.com/in/csaladenes" target="_blank" alt="" >
+                  <area shape="rect" coords="75,0,145,70" href="https://www.facebook.com/csaladenes" target="_blank" alt="" >
+                  <area shape="rect" coords="75,75,145,145" href="skype:csaladenes?call" alt="" >
+               </map>
+               <!--tile 2-5-->                      
+               <div  class="tile group8 noClick" style="
+                  margin-top:45px; margin-left:20990px; z-index:800;
+                  width:300px; height:145px;
+                  background:#008198; padding:0;"  data-pos='45-20990-300'>
+                  <div class='tileTitle' style='margin-left:10px;'>Latest Updates</div>
+                  <div class='tileDesc' style='margin-left:12px;'>...
+                  </div>
+               </div>
+               <!--tile 2-6-->  
+               <div  class="tile group8 noClick" href="https://twitter.com/csaladenes"  style="
+                  margin-top:45px; margin-left:21455px; z-index:800;
+                  width:300px; height:455px;
+                  background:#ffffff; padding:0; padding-top:0px;"  data-pos='45-21455-300'>
+                  <div class="twitter-timeline" href="https://twitter.com/csaladenes" data-widget-id="462362661829623808">
+                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  </div>
+               </div>
+               <!--tile 2-7-->
+               <a href='Denes_CV_2014.pdf' class="tile group8 pdf" style="
+                  margin-top:45px; margin-left:21300px; z-index:800;
+                  width:145px; height:145px;
+                  background:#6950ab;"  data-pos='45-21300-145'  data-n=0>
+                  <div><img alt="Denes Csala" src="denes_csala.jpg"></div>
+                  <div class='tileLabelWrapper bottom'>
+                     <div class='tileLabel bottom' style="border-bottom-color:#008198;">View CV</div>
+                  </div>
+               </a>
+               <a href="https://plus.google.com/100943737036023614165" rel="author"></a>	
+            </div>
+         </div>
+         <footer><a href="http://www.csaladen.es">© Dénes Csala 2014</a></footer>
+         <!--<footer><a href="http://metro-webdesign.info">Website plugin: Thomas Verelst</a></footer>-->
+      </div>
+      <div id="catchScroll"></div>
+   </body>
+</html>
