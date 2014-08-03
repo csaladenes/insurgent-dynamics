@@ -5,7 +5,7 @@
 html,body,iv,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup, tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:baseline; }
 strong{font-weight:bolder;}
 :focus { outline:0; }
-body { line-height:1.4; color:#fff; }
+body { line-height:1.4; color:#000; }
 ol,ul { list-style:square;margin-left:20px;} 
 table { border-collapse:separate; border-spacing:0; }
 caption,th,td { text-align:left; font-weight:normal; } 
@@ -16,7 +16,7 @@ html{
 	margin:0;
 	padding:0;
 	overflow:scroll;
-	min-width:1050px;
+	min-width:300px;
 	font-weight:normal;
 	z-index:-5;
 	background:#FFF;	
@@ -27,7 +27,7 @@ body{
 	position:static;
 	margin:0;
 	padding:0;
-	min-width:1050px;
+	min-width:300px;
 	min-height:100%;
 	width:auto;
 }
@@ -45,13 +45,13 @@ header{
 #headerWrapper{
 	position:relative;
 	width:100%;
-	min-height:10px;
+	min-height:20px;
 }
 #headerCenter{
 	position:relative;
-	max-width:1050px;
+	max-width:900px;
 	padding:0 15px 0 15px;
-	margin: 0 auto 0 0;
+	margin: 0 auto 7px auto;
 	overflow:hidden;
 }
 #headerTitles{
@@ -60,32 +60,32 @@ header{
 	display:inline-block;
 }
 #headerTitles>h1{
-	margin:-10px 0 0px 0;
+	margin:7px 0 3px 0;
 }
 #headerTitles>h2{
-	margin: 0px 0 5px 3px;
+	margin: 5px 0 5px 3px;
 }
 #wrapper{
 	margin:0 0 0 0;
-	padding:0px 0 1px 0;
+	padding:90px 0 1px 0;
 	position:relative;
 	z-index:0;
 }
 #centerWrapper{
 	position:relative;
-	max-width: 1050px;
-	margin:0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
+	max-width: 900px;
+	margin:0 auto 15px auto;
+	padding: 0px 15px 0px 15px;
 }
 #contentWrapper{
-	min-height:600px;
-	margin: 0px 0 0 0;	
-	padding:0px 0px 0px 0px;
+	min-height:300px;
+	margin: -40px 0 0 0;	
+	padding:35px 20px 70px 20px;
 	display:none;	
 	overflow:visible;
 }
 #content{
-	min-height:600px;
+	min-height:200px;
 	position:relative;	
 	display:block;
 	margin:0;
@@ -97,7 +97,7 @@ header{
 	display:none;
 	position:relative;		
 	font-weight:normal;
-	margin-top:0px;    
+	margin-top:30px;    
 }
 footer{ /*show a little footer in the rightdown corner*/
 	position:fixed;
@@ -106,24 +106,102 @@ footer{ /*show a little footer in the rightdown corner*/
 	padding:1px;
 	font-weight:lighter;
 	text-decoration:none;
-	z-index:800;
+	padding-right:5px;
 }
 footer:hover{
 	cursor:default;
 }
-
+.navArrows{
+	position:absolute;
+	margin-top:60px;
+	opacity: 0.5;
+	filter:  alpha(opacity=50);
+	height:32px;
+	display:none;
+}
+.navArrows:hover{
+	cursor:pointer;
+}
+.navArrows.hidden{
+	opacity:0;
+}
+/* General Navigation */
+.groupTitle{ /*the title of the tilegroups*/	
+	position:absolute;
+	text-decoration:none;
+	white-space: nowrap;
+}
+.groupTitle>h3{
+	margin:0;
+	font-weight:lighter;
+}
 #bgImage{ position:fixed; top:0; left:0; z-index:-4; min-width:125%;min-height:100%;}
 #catchScroll{position:fixed;top:0; left:0;width:100%;height:100%;z-index:-1;}
 #mobileOnDesktop{
-	color:#000;
+	color:#FFF;
 	padding:5px;
 	text-decoration:none;
 	position:absolute;
 	top:0;left:0;
-	background-color:#FFF;
+	background-color:#668000;
 	z-index:999;
 }
 #mobileOnDesktop:hover, #mobileOnDesktop:active{
-	color:#000;
+	color:#FFF;
 	text-decoration:underline;
-	border:1px solid #000;
+	border:1px solid #FFF;
+}
+/* MAIN nav (the top buttons) */
+nav{
+	z-index:1;
+	float:right;
+	vertical-align:middle;
+	margin-top:10px;
+}
+nav>a, #navItems>a{
+	padding: 7px 3px 5px 3px;
+	margin:0;
+	display:inline-block;
+	z-index:inherit;
+	cursor:pointer;
+	height:auto;
+	width:95px;
+	-webkit-transition: background 100ms ease-in;
+    -moz-transition: background 100ms ease-in;
+    -o-transition: background 100ms ease-in;
+	-ms-transition: background 100ms ease-in;
+    transition: background 100ms ease-in;
+}
+nav>a>img{
+	display:block;
+	margin: 0 auto 5px auto;
+}
+/* For smaller column nav */
+.column nav{
+	position:absolute;
+	right:0;
+	top:0;
+	margin-top:0;
+	z-index:300;
+	overflow:visible;
+}
+.column #navTitle{
+	background-color:#668800;
+	color:#FFF;
+	font-size:16px;
+	display:inline-block;
+	padding:5px;
+	margin-left:-10px;
+	cursor:pointer;
+	width:100%;
+}
+.column nav>a{
+	padding:5px;
+	display:none;
+	background-color:#444;
+	color:#FFF;
+	border-bottom:1px solid #777;
+}
+.column nav>a>img{
+	margin: 0 auto;
+}

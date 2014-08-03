@@ -3,7 +3,7 @@ html{
 	font-family: "Open Sans", Segoe UI light, Verdana, Tahoma,Helvetica,sans-serif;
 	font-size:13px;
 	color: #111; /* MAIN color for site things, but not for CONTENT!! */
-	background-color:#fff; /* Main background color */
+	background-color:#DDD; /* Main background color */
 	text-decoration:none;
 	
 }
@@ -16,27 +16,22 @@ nav>a{ /* main nav on top */
 }
 nav>a:hover{
 	color:#FFF;
+	background-color:#888;
 	background-color:#666;
 	text-decoration:none;
 }
-.navActive{
-	background-color:#F80;
+nav img{
+	height:32px;
 }
-.navActive1{
+.navActive{
 	background-color:#F80;
 }
 .navActive:hover{
 	background-color:#F60;
 	text-decoration:none;
 }
-.navActive1:hover{
-	background-color:#F60;
-	text-decoration:none;
-}
 /* BODY PARTS */
-header{/* the header on top */
-			
-}
+
 #headerWrapper{
 	background-color:#444;
 	border-bottom:1px #999 solid;
@@ -44,24 +39,36 @@ header{/* the header on top */
 }
 #headerTitles>h1>a{/*the big header text */
 	color:#FFF;
-	font-size:22px;
+	font-size:42px;
 	text-decoration:none;
-	
+	font-weight:300;
 }
 #headerTitles>h1>a:hover{
 	color:#F90;
 	text-decoration:none;
 }
 #headerTitles>h2{/*the smaller title */
-	font-size:10px;
+	font-size:15px;
 	color:#CCC;
 }
-
+.groupTitle>h3{ /* The tilegroup title on the homepage*/
+	font-size: 24px;
+	color:#444;
+}
+.groupTitle>h3:hover{ /* The tilegroup title on the homepage*/
+	color:#FF8000;
+	text-decoration:none;
+}
+.groupTitle:hover{ /* The tilegroup title on the homepage*/
+	color:#FF8000;
+	text-decoration:none;
+}
 #content{ /* the content */
-	color:#fff;
+	color:#111;
 }
 #contentWrapper{
-	background-color:#fff;
+	background-color:#D4D4D4;
+	background-color:rgba(180,180,180,0.2);
 	-webkit-box-shadow: 0 0 7px #777;
 	-moz-box-shadow: 0 0 7px #777;
 	box-shadow: 0 0 7px #777;
@@ -69,6 +76,7 @@ header{/* the header on top */
 footer{
 	color:#DDD;
 	font-size:10px;
+	font-family:"Trebuchet MS";
 	background-color:rgba(70,70,70,0.5);
 	border-top:1px solid #999;
 	border-left:1px solid #999;
@@ -100,18 +108,7 @@ footer{
 		box-shadow: 0 0 15px #333, 0 0 1px 1px #FFF !important;
 	}	
 }
-.halfop{
-	opacity: 0.5;
-}
-.quarterop{
-	opacity: 0.75;
-}
-.fullop{
-	opacity: 1;
-}
-.nineop{
-	opacity: 0.9;
-}
+
 /*More */
 a{	/* links */
 	color:#fff; /* Main color for links */
@@ -167,52 +164,3 @@ h6{
 	color:#555;
 	text-transform:uppercase;
 }
-/*CONTENT */
-p{
-	margin-top:1.5em;
-}
-.display-block { display: block; }
-.margin-0 { margin: 0; }
-.margin-t-0 { margin-top: 0; }
-.margin-b-0 { margin-bottom: 0; }
-.margin-t-20 { margin-top:20px;}
-.margin-t-40 { margin-top:40px;}
-.margin-b-20 { margin-bottom:20px;}
-.margin-b-40 { margin-bottom:40px;}
-/* Fluid images and objects */
-.size-auto {
-	max-width: 100%;
-	height: auto;
-}
-/* Block Alignment*/
-.align-left{
-	display: block;
-	float: left;
-	text-align:left;
-}
-.align-right{
-	display: block;
-	float: right;
-	text-align:right;
-}
-.align-center{
-	display: block;
-	text-align:center;
-	margin: auto;
-}
-/* Text Alignment */
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
-.text-justify { text-align: justify; }
-/* Text color */
-.white{
-	color:#FFF;
-}
-.grey{
-	color:#333;
-}
-/*Weight */
-.weight-lighter{font-weight:lighter;}
-.weight-normal{font-weight:normal;}
-
