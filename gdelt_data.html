@@ -39,8 +39,8 @@
          scale = 145;
          spacing = 10;
          theme = 'theme_v3';
-         $group.titles = ["GDELT filtered data","GDELT correl data","Contact"];
-         $group.spacingFull = [6,6,5];
+         $group.titles = ["GDELT filtered data","GDELT correl data"];
+         $group.spacingFull = [6,6];
          $group.inactive.opacity = "0.6";
          $group.inactive.clickable = "1";
          $group.showEffect = 0;
@@ -102,17 +102,10 @@
 				</li>
 			</ul>
 		 </div>
-		 <div id="country" style="float:left; margin-left:5px; font-size:16px; margin-top:15px; width:200px; overflow:hidden;">Afghanistan</div>
-            <div id="headerCenter">
-               <div id="headerTitles">
-                  <h1><a rel="author">Insurgent Dynamics</a></h1>
-                  <h2 >A systematic analysis of civil unrest events</h2>
-               </div>
+		 <div id="headerCenter">
                <nav>
                   <a style="width:150px;" rel="group0">GDELT filtered data</a>
-                  <a style="width:150px;"rel="group1">GDELT correl data</a>
-                  <a rel="group2">Contact</a>
-				  <img style="width:80px;">
+                  <a style="width:150px;margin-right:40px;" rel="group1">GDELT correl data</a>
 				  <a href="http://conflict.csaladen.es">Main</a>
                </nav>
             </div>
@@ -399,12 +392,14 @@
     </div>
 	</div>
 	</header>
+	 <div id="country" style="position:fixed;float:left; margin-left:100px; font-size:16px; color:#222; height: 30px; margin-top:50px;z-index:9999;"><b>Afghanistan</b></div>
+	 <div style="position:fixed;float:left; margin-left:5px; font-size:16px; color:#fff; height: 30px; margin-top:5px;z-index:9999; font-size:14px;"><b><a href="http://conflict.csaladen.es/">Insurgent Dynamics</a></b></div>
+	 <div style="position:fixed;float:left; margin-left:5px; font-size:16px; color:#ddd; height: 30px; margin-top:25px;z-index:9999; font-size:9px;"><b>A visual exploratory of <a href="http://gdeltproject.org/" target="_blank">GDELT</a> events</b></div> 
       <div id="wrapper">
          <div id="centerWrapper" >
             <div id="tileContainer">
                <a href="#&GDELT filtered data" id="groupTitle0" onclick="javascript:$group.goTo(0);"></a>
                <a href="#&GDELT correl data" id="groupTitle1" onclick="javascript:$group.goTo(1);"></a>
-			   <div href="#&contact" id="groupTitle2" style="margin-left:2130px;" onclick="javascript:$group.goTo(2);"></div>
                <!--tile 1-1-->
                <div  class="tile group0 noClick" style="
                   margin-top:0px; margin-left:0px; 
@@ -421,92 +416,19 @@
                   <div style="margin-left:100px; margin-top:-30px; ">
 				  <img id="fitimage" alt="data" src="filtered/1/AF.png" height=680></div>
                </div>
-               <!--tile 2-1-->
-               <div  id="tileScroll0_3-1" class="tile tileScroll group2 noClick " style="
-                  margin-top:200px; margin-left:2240px; z-index:800;
-                  width:300px; height:145px;
-                  background:#008198;"  data-pos='200-2240-300' >
-                  <div class='tileTitle' style='margin-left:10px;'>Get in touch</div>
-                  <div class='divScroll' style='margin-left:12px;'>Currently I am based in Abu Dhabi.<br />(+ 4:00 GMT, + 8:00 EST)</div>
-                  <script>scrollTile("0_3-1", ["Currently I am based in Abu Dhabi.<br/>(+ 4:00 GMT, + 8:00 EST)",
-                     "You can contact me via Email, Facebook, LinkedIn or Skype ..",
-                     "in English, Hungarian or Romanian.<br/>But I will also understand French or German.",
-                     "Please also visit my other websites:</br><b></br><a href='http://www.arc-initiative.org' target='_blank'>ARC initiative</a></br><a href='http://www.blueflower.me' target='_blank'>blue flower project</a></b>"], 5000, 0)
-                  </script> 
+			   
+			   <div  class="tile group1 noClick" style="
+                  margin-top:0px; margin-left:2130px; 
+                  width:1030px; height:640px;
+                  background:#fff;"  data-pos='0-1330-2130' >
                </div>
-               <!--tile 2-2-->                      
-               <div class="tile group2 noClick" style="
-                  margin-top:200px; margin-left:2085px; z-index:800;
-                  width:145px; height:145px;
-                  background:#008198; padding:0;"  data-pos='200-2085-145'>
-                  <div class='tileDesc' style='margin-left:10px; font-size:9px;'>
-                     <br/><br/><a href="http://www.csaladen.es">http://www.csaladen.es</a>
-                     <br/><br/><br/><a href="mailto:mail@csaladen.es">mail <img src='kukk.png' alt="kukac" style="width:11px;" /> csaladen.es</a>
-                     <br/><a href="mailto:dcsala@masdar.ac.ae">dcsala <img src='kukk.png' alt="kukac" style="width:11px;" /> masdar.ac.ae</a>
-                     <br/><a href="mailto:denes@mit.edu">denes <img src='kukk.png' alt="kukac" style="width:11px;" /> mit.edu</a>
-                     <br/><a href="mailto:denes@arc-initiative.org">denes <img src='kukk.png' alt="kukac" style="width:11px;" /> arc-initiative.org</a>
-                  </div>
-               </div>
-               <!--tile 2-3-->                      
-               <div  class="tile group2 noClick" style="
-                  margin-top:355px; margin-left:2085px; z-index:800;
-                  width:300px; height:145px;
-                  background:#008198; padding:0;"  data-pos='355-2085-300'>
-                  <div class='tileDesc' style='margin-left:12px;'><br /><b>Dénes Csala</b>
-                     <br/>Graduate Research Assistant
-                     <br/>Sustainable Sociotechnical Transitions Group
-                     <br/>Engineering Systems & Management Program
-                     <br/>Masdar Institute of Science and Technology
-                     <br/>Abu Dhabi, United Arab Emirates<br />
-                  </div>
-               </div>
-               <!--tile 2-4-->                      
-               <div  class="tile group2 noClick" style="
-                  margin-top:355px; margin-left:2395px; z-index:800;
-                  width:145px; height:145px;
-                  padding:0;"  data-pos='355-2395-145'> 
-               <img src='mail.png' alt="contact" style="width:145px;" usemap="#metroid" ismap="ismap" border="0"/> 
-               </div>
-               <map name="metroid">
-                  <area shape="rect" coords="0,0,70,70" href="mailto:dcsala@masdar.ac.ae" alt="">
-                  <area shape="rect" coords="0,75,70,145" href="http://www.linkedin.com/in/csaladenes" target="_blank" alt="" >
-                  <area shape="rect" coords="75,0,145,70" href="https://www.facebook.com/csaladenes" target="_blank" alt="" >
-                  <area shape="rect" coords="75,75,145,145" href="skype:csaladenes?call" alt="" >
-               </map>
-               <!--tile 2-5-->                      
-               <div  class="tile group2 noClick" style="
-                  margin-top:45px; margin-left:2085px; z-index:800;
-                  width:300px; height:145px;
-                  background:#008198; padding:0;"  data-pos='45-2085-300'>
-                  <div class='tileTitle' style='margin-left:10px;'>Latest Updates</div>
-                  <div class='tileDesc' style='margin-left:12px;'>...
-                  </div>
-               </div>
-               <!--tile 2-6-->  
-               <div  class="tile group2 noClick" href="https://twitter.com/csaladenes"  style="
-                  margin-top:45px; margin-left:2550px; z-index:800;
-                  width:300px; height:455px;
-                  background:#ffffff; padding:0; padding-top:0px;"  data-pos='45-2550-300'>
-                  <div class="twitter-timeline" href="https://twitter.com/csaladenes" data-widget-id="462362661829623808">
-                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                  </div>
-               </div>
-               <!--tile 2-7-->
-               <a href='Denes_CV_2014.pdf' class="tile group2 pdf" style="
-                  margin-top:45px; margin-left:2395px; z-index:800;
-                  width:145px; height:145px;
-                  background:#6950ab;"  data-pos='45-2395-145'  data-n=0>
-                  <div><img alt="Denes Csala" src="denes_csala.jpg"></div>
-                  <div class='tileLabelWrapper bottom'>
-                     <div class='tileLabel bottom' style="border-bottom-color:#008198;">View CV</div>
-                  </div>
-               </a>
-               <a href="https://plus.google.com/100943737036023614165" rel="author"></a>	
+               	
             </div>
          </div>
-         <footer><a href="http://www.csaladen.es">© Dénes Csala 2014</a></footer>
+        <footer style="z-index:1000000;"><a href="http://www.csaladen.es" target="_blank">© Dénes Csala 2014</a></footer>
          <!--<footer><a href="http://metro-webdesign.info">Website plugin: Thomas Verelst</a></footer>-->
       </div>
-      <div id="catchScroll"></div>
+      <div id="catchScroll">
+	  <a href="https://plus.google.com/100943737036023614165" rel="author"></a></div>
    </body>
 </html>
