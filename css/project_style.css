@@ -1,5 +1,7 @@
 div.sc_menu_wrapper {
-	position: fixed; 	
+	position: fixed; 
+	left:0px;
+	top:43px;
 	height: 100%;
 	/* Make bigger than a photo, because we need a place for a scrollbar. */
 	width:110px;
