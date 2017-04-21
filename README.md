@@ -3,7 +3,9 @@
 [![Insurgent Dynamics](filtered/2/AF1.png "Insurgent Dynamics")](http://conflict.csaladen.es/)  
   
 A systematic analysis of global conflicts using the GDELT event database and a hybrid system dynamics-time series modelling methdology.
-
+  
+__This is an interactive global visualization and exploration interface (_exploratorium_)__.  
+  
 # App
 Try: http://conflict.csaladen.es  
 
